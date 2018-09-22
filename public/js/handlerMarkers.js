@@ -4,7 +4,7 @@ var markers = [];
 
 var locations = [];
 
-function initMap(coordsToDisplay,origin1) {
+function initMap(coordsToDisplay, origin1) {
 
     var directionsDisplay = new google.maps.DirectionsRenderer;
     var directionsService = new google.maps.DirectionsService;
@@ -26,8 +26,7 @@ function initMap(coordsToDisplay,origin1) {
 
             directionsDisplay.setMap(map);
 
-            calculateAndDisplayRoute(directionsService, directionsDisplay,  origin1.lat, origin1.lng, coordsToDisplay[0][1], coordsToDisplay[0][2]);
-
+            calculateAndDisplayRoute(directionsService, directionsDisplay, origin1.lat, origin1.lng, coordsToDisplay[0][1], coordsToDisplay[0][2]);
 
             infoWindow.setPosition(origin1);
             infoWindow.setContent('<strong>You are here!<strong');
@@ -89,14 +88,9 @@ function showSelectedMarkers() {
  * @param map
  */
 function setMapOnAll(map) {
-
-    console.log("1", markers)
     for (var j = 0; j < markers.length; j++) {
         markers[j].setMap(map);
     }
-
-    console.log("2", markers)
-
 }
 
 /**
@@ -107,37 +101,20 @@ function clearMarkers() {
 }
 
 
-/**
- * Shows any markers currently in the array
- */
-function redisplayPreviousMarkers() {
-    setMapOnAll(map);
-}
-
-/**
- * Deletes all markers in the array by removing references to them
- */
-function deleteMarkers() {
-    clearMarkers();
-    markers = [];
-}
-
-
-
 function calculateAndDisplayRoute(directionsService, directionsDisplay, sartLat, startLng, entLat, endLng) {
-debugger;
+    debugger;
     directionsService.route({
-      origin: {lat:  parseFloat(sartLat), lng:  parseFloat(startLng)},  // Haight.
-      destination: {lat:  parseFloat(entLat), lng:  parseFloat(endLng)},  // Ocean Beach.
-      // Note that Javascript allows us to access the constant
-      // using square brackets and a string value as its
-      // "property."
-      travelMode: 'DRIVING'
-    }, function(response, status) {
-      if (status == 'OK') {
-        directionsDisplay.setDirections(response);
-      } else {
-        console.log('Directions request failed due to ' + status);
-      }
+        origin: {lat: parseFloat(sartLat), lng: parseFloat(startLng)},  // Haight.
+        destination: {lat: parseFloat(entLat), lng: parseFloat(endLng)},  // Ocean Beach.
+        // Note that Javascript allows us to access the constant
+        // using square brackets and a string value as its
+        // "property."
+        travelMode: 'DRIVING'
+    }, function (response, status) {
+        if (status == 'OK') {
+            directionsDisplay.setDirections(response);
+        } else {
+            console.log('Directions request failed due to ' + status);
+        }
     });
-  }
+}
