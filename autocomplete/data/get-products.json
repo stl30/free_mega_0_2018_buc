@@ -1,15 +1,62 @@
-[{
-  "id": 1,
-  "nume_produs": "test",
-  "caracteristics": "description"
-},
+[
+  {
+    "id": 1,
+    "nume_produs": "test",
+    "caracteristics": "description long teext "
+  },
   {
     "id": 2,
     "nume_produs": "test2",
-    "caracteristics": "description2"
+    "caracteristics": "description2 very long text"
   },
   {
     "id": 3,
     "nume_produs": "test3",
-    "caracteristics": "description3"
-  }]
+    "caracteristics": "description3 super duper muper"
+  },
+  {
+    "id": 4,
+    "nume_produs": "test",
+    "caracteristics": "description long teext "
+  },
+  {
+    "id": 5,
+    "nume_produs": "test2",
+    "caracteristics": "description2 very long text"
+  },
+  {
+    "id": 6,
+    "nume_produs": "test3",
+    "caracteristics": "description3 super duper muper"
+  },
+  {
+    "id": 7,
+    "nume_produs": "test",
+    "caracteristics": "description long teext "
+  },
+  {
+    "id": 8,
+    "nume_produs": "test2",
+    "caracteristics": "description2 very long text"
+  },
+  {
+    "id": 9,
+    "nume_produs": "test3",
+    "caracteristics": "description3 super duper muper"
+  },
+  {
+    "id": 10,
+    "nume_produs": "test",
+    "caracteristics": "description long teext "
+  },
+  {
+    "id": 11,
+    "nume_produs": "test2",
+    "caracteristics": "description2 very long text"
+  },
+  {
+    "id": 12,
+    "nume_produs": "test3",
+    "caracteristics": "description3 super duper muper"
+  }
+]

@@ -1,15 +1,18 @@
-$(function() {
+$(function () {
     console.log('here');
     // $.get('http://192.168.100.77:8000/get-products', loadCallback);
     $.get('data/get-products.json', loadCallback);
     var productList = [];
 
-    function loadCallback(data){
+    function loadCallback(data) {
         productList = data;
+        data.forEach(function (element) {
+            element.imgSource = 'images/htcu11.png';
+        });
         initAutocomplete();
     }
 
-    function initAutocomplete(){
+    function initAutocomplete() {
         $('#input-tags').selectize({
             persist: false,
             maxItems: 1,
@@ -17,13 +20,16 @@ $(function() {
             searchField: ['nume_produs', 'caracteristics'],
             options: productList,
             render: {
-                option: function(data, escape) {
+                option: function (data, escape) {
                     return '<div class="option">' +
-                        '<span class="title">' + escape(data.nume_produs) + ' </span>' +
-                        '<span class="url">' + escape(data.caracteristics) + '</span>' +
-                        '</div>';
+                        '       <img class="imgSource" src="' + escape(data.imgSource) + '" />' +
+                        '       <span class="content">' +
+                    '               <span class="title">' + escape(data.nume_produs) + ' </span>' +
+                    '               <div class="description">' + escape(data.caracteristics) + '</div>' +
+                    '           </span>' +
+                    '       </div>';
                 },
-                item: function(data, escape) {
+                item: function (data, escape) {
                     return '<div class="item">' + escape(data.nume_produs) + '</div>';
                 }
             }
