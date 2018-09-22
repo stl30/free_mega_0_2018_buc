@@ -1,0 +1,234 @@
+[
+  {
+    "id": 88,
+    "nume_produs": "Alcatel 20.08 Negru"
+  },
+  {
+    "id": 84,
+    "nume_produs": "Alcatel 20.38"
+  },
+  {
+    "id": 76,
+    "nume_produs": "Alcatel U5"
+  },
+  {
+    "id": 45,
+    "nume_produs": "BlackBerry KeyOne Negru 4G"
+  },
+  {
+    "id": 13,
+    "nume_produs": "HTC U11"
+  },
+  {
+    "id": 37,
+    "nume_produs": "HTC U12 Plus"
+  },
+  {
+    "id": 14,
+    "nume_produs": "Huawei Mate 10 Pro"
+  },
+  {
+    "id": 51,
+    "nume_produs": "Huawei P Smart Negru"
+  },
+  {
+    "id": 2,
+    "nume_produs": "Huawei P20"
+  },
+  {
+    "id": 57,
+    "nume_produs": "Huawei P20 Lite"
+  },
+  {
+    "id": 29,
+    "nume_produs": "Huawei P20 Pro "
+  },
+  {
+    "id": 80,
+    "nume_produs": "Huawei P9 Lite 2017"
+  },
+  {
+    "id": 27,
+    "nume_produs": "iPhone 6s"
+  },
+  {
+    "id": 56,
+    "nume_produs": "iPhone 6S Plus"
+  },
+  {
+    "id": 5,
+    "nume_produs": "iPhone 7"
+  },
+  {
+    "id": 12,
+    "nume_produs": "iPhone 7 Plus"
+  },
+  {
+    "id": 44,
+    "nume_produs": "iPhone 8"
+  },
+  {
+    "id": 42,
+    "nume_produs": "iPhone 8 Plus"
+  },
+  {
+    "id": 18,
+    "nume_produs": "iPhone SE"
+  },
+  {
+    "id": 28,
+    "nume_produs": "iPhone X"
+  },
+  {
+    "id": 3,
+    "nume_produs": "LG G7 ThinQ 4G"
+  },
+  {
+    "id": 21,
+    "nume_produs": "LG K10 2017"
+  },
+  {
+    "id": 90,
+    "nume_produs": "LG K11"
+  },
+  {
+    "id": 67,
+    "nume_produs": "LG Q6"
+  },
+  {
+    "id": 26,
+    "nume_produs": "Mobiwire Ayasha"
+  },
+  {
+    "id": 74,
+    "nume_produs": "Nokia 1 Albastru"
+  },
+  {
+    "id": 97,
+    "nume_produs": "Nokia 130"
+  },
+  {
+    "id": 8,
+    "nume_produs": "Nokia 2"
+  },
+  {
+    "id": 20,
+    "nume_produs": "Nokia 3"
+  },
+  {
+    "id": 11,
+    "nume_produs": "Nokia 3.1 4G"
+  },
+  {
+    "id": 15,
+    "nume_produs": "Nokia 3310 2017"
+  },
+  {
+    "id": 89,
+    "nume_produs": "Nokia 7 Plus negru 4G"
+  },
+  {
+    "id": 64,
+    "nume_produs": "Nokia 8"
+  },
+  {
+    "id": 92,
+    "nume_produs": "Samsung Galaxy A3 2017"
+  },
+  {
+    "id": 38,
+    "nume_produs": "Samsung Galaxy A5 2017"
+  },
+  {
+    "id": 25,
+    "nume_produs": "Samsung Galaxy A6 4G+"
+  },
+  {
+    "id": 36,
+    "nume_produs": "Samsung Galaxy A6 Plus"
+  },
+  {
+    "id": 99,
+    "nume_produs": "Samsung Galaxy A8 4G"
+  },
+  {
+    "id": 30,
+    "nume_produs": "Samsung GALAXY J3 2017"
+  },
+  {
+    "id": 22,
+    "nume_produs": "Samsung GALAXY J5 2017"
+  },
+  {
+    "id": 23,
+    "nume_produs": "Samsung GALAXY J6 2018 4G"
+  },
+  {
+    "id": 19,
+    "nume_produs": "Samsung GALAXY Note 8"
+  },
+  {
+    "id": 16,
+    "nume_produs": "Samsung GALAXY S7"
+  },
+  {
+    "id": 81,
+    "nume_produs": "Samsung GALAXY S7 Edge"
+  },
+  {
+    "id": 32,
+    "nume_produs": "Samsung Galaxy S8"
+  },
+  {
+    "id": 40,
+    "nume_produs": "Samsung Galaxy S8+"
+  },
+  {
+    "id": 4,
+    "nume_produs": "Samsung Galaxy S9"
+  },
+  {
+    "id": 1,
+    "nume_produs": "Samsung Galaxy S9 Plus"
+  },
+  {
+    "id": 34,
+    "nume_produs": "Sony Xperia XA1"
+  },
+  {
+    "id": 63,
+    "nume_produs": "Sony Xperia XA2"
+  },
+  {
+    "id": 54,
+    "nume_produs": "Sony Xperia XZ2 4G"
+  },
+  {
+    "id": 17,
+    "nume_produs": "Vodafone  Smart Mini 7"
+  },
+  {
+    "id": 49,
+    "nume_produs": "Vodafone Smart E8"
+  },
+  {
+    "id": 9,
+    "nume_produs": "Vodafone Smart N8"
+  },
+  {
+    "id": 10,
+    "nume_produs": "Vodafone Smart N9"
+  },
+  {
+    "id": 87,
+    "nume_produs": "Vodafone Smart N9 Lite"
+  },
+  {
+    "id": 59,
+    "nume_produs": "Vodafone Smart V8"
+  },
+  {
+    "id": 31,
+    "nume_produs": "Wiko Tommy 2"
+  }
+]

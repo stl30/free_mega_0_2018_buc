@@ -1,0 +1,17 @@
+.option {
+    display: flex;
+}
+
+.option .imgSource {
+    height: 100px;
+}
+
+.option .title {
+    font-weight: bold;
+}
+
+.option .description {
+    margin-top: 10px;
+}
+
+.selectize-dropdown-content {max-height: 80vh; }
