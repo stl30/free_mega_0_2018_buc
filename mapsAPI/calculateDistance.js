@@ -60,7 +60,7 @@ function getTimeUntill(destinationsList, origin1) {
 
             coordsToDisplay = getCoordsToDisplay(sortedDestinationsList);
 
-            initMap(coordsToDisplay);
+            initMap(coordsToDisplay,origin1);
 
         }
     });

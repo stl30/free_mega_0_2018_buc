@@ -1,7 +1,5 @@
 function initMaps(){
 
-    var origin = { lat: 44.477516, lng: 26.103049 };
-
     var destinationB = {
         locationName: "LocB",
         lat: 44.46071, lng: 26.0742, distanceDuration: {
@@ -16,7 +14,20 @@ function initMaps(){
     
     var destinationsList = [destinationC, destinationA, destinationB];
 
-    var origin1 = { lat: 44.477516, lng: 26.103049 };
+
+    var origin1 = { lat: 44.477516, lng: 26.103049 }; //some default location
+
+    //infoWindow = new google.maps.InfoWindow;
+
+    if (navigator.geolocation) {
+
+        navigator.geolocation.getCurrentPosition(function (position) {
+            origin1 = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude
+            };
+        });
+    }
 
 
     getTimeUntill(destinationsList,origin1);

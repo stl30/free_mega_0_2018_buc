@@ -4,7 +4,7 @@ var markers = [];
 
 var locations = [];
 
-function initMap(coordsToDisplay) {
+function initMap(coordsToDisplay,origin1) {
 
     infoWindow = new google.maps.InfoWindow;
     locations = coordsToDisplay;
@@ -13,19 +13,20 @@ function initMap(coordsToDisplay) {
     if (navigator.geolocation) {
 
         navigator.geolocation.getCurrentPosition(function (position) {
-            var pos = {
-                lat: position.coords.latitude,
-                lng: position.coords.longitude
-            };
 
-            myCurrentLocation = pos;
+            // var pos = {
+            //     lat: position.coords.latitude,
+            //     lng: position.coords.longitude
+            // };
+
+            myCurrentLocation = origin1;
 
             map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 10,
                 center: myCurrentLocation
             });
 
-            infoWindow.setPosition(pos);
+            infoWindow.setPosition(origin1);
             infoWindow.setContent('Location found.');
             infoWindow.open(map);
         }, function () {
