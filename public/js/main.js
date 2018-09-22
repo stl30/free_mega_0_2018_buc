@@ -57,6 +57,8 @@ $(function () {
         $('#productMemory').html(defaultVariant.memory);
         $('#productCamera').html(defaultVariant.camera);
 
+        $('#variantList').html('');
+
         for (var i = 0; i < data.length; i++) {
             $('#variantList').append('<li>' + data[i].name + '</li>')
         }
