@@ -1,19 +1,3 @@
-var origin = { lat: 44.477516, lng: 26.103049 };
-
-var destinationB = {
-    locationName: "LocB",
-    lat: 44.46071, lng: 26.0742, distanceDuration: {
-        duration: {
-            value: 0
-        }
-    }
-};
-
-var destinationA = { locationName: "LocA", lat: 44.44095, lng: 26.10002, distanceDuration: {} };
-var destinationC = { locationName: "LocB", lat: 44.45302, lng: 26.09957, distanceDuration: {} };
-
-var destinationsList = [destinationC, destinationA, destinationB];
-
 var travelMode = 'DRIVING';
 ///https://developers.google.com/maps/documentation/javascript/directions#TravelModes
 
@@ -59,6 +43,8 @@ function getTimeUntill(destinationsList, origin1) {
 
             initMap(coordsToDisplay,origin1);
 
+            renderDistances(sortedDestinationsList);
+
         }
     });
 }
@@ -73,7 +59,8 @@ function getCoordsToDisplay(sortedDestinationsListArg) {
             [
                 sortedDestinationsList[i].locationName,
                 sortedDestinationsList[i].lat,
-                sortedDestinationsList[i].lng
+                sortedDestinationsList[i].lng,
+                sortedDestinationsList[i].address
             ]
         )
     }
@@ -81,3 +68,21 @@ function getCoordsToDisplay(sortedDestinationsListArg) {
     return coordsToDsipaly;
 }
 
+function renderDistances(sortedDestinationsList){
+
+    var ul = [];
+    for(var i = 0; i<sortedDestinationsList.length; i++){
+        var li = '<strong>' + locationName + '</strong>'+
+                '<br>'+
+                address +
+                '<br>' +
+                contact.email +
+                '<br>' +
+                contact.phone
+        ul.push(li)
+    }
+
+    var HTML_ul = '<ul>' + ul.join() + '</ul>';
+
+    $("#showDistances").html(HTML_ul);
+}

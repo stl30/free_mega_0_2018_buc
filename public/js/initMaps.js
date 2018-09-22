@@ -7,20 +7,25 @@ function initMaps(){
             {
                 locationName: window.storeData[i].dealer_name,
                 lat: parseFloat(window.storeData[i].latitude),
-                lng: parseFloat(window.storeData[i].longitude)
+                lng: parseFloat(window.storeData[i].longitude),
+                address: window.storeData[i].address,
+                schedule: {
+                    monday: window.storeData[i].monday,
+                    tuesday: window.storeData[i].tuesday,
+                    wednesday: window.storeData[i].wednesday,
+                    thursday: window.storeData[i].thursday,
+                    friday: window.storeData[i].friday,
+                    saturday: window.storeData[i].saturday,
+                    sunday: window.storeData[i].sunday
+                },
+                contact: {
+                    email: window.storeData[i].email,
+                    phone: window.storeData[i].phone
+                }
             }
         )
     }
 
-    var destinationB = {
-        locationName: "LocB",
-        lat: 44.46071, lng: 26.0742, distanceDuration: {
-            duration: {
-                value: 0
-            }
-        }
-    };
-    
 
     var origin1 = { lat: 44.477516, lng: 26.103049 }; //some default location
 

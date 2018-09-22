@@ -65,6 +65,7 @@ $(function () {
 
     function loadProductDetailsCallback(data) {
         console.log('stores for phone',  data[0].stores);
+        debugger;
         window.storeData = null;
         window.storeData = data[0].stores;
 
