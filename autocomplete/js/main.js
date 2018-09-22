@@ -47,21 +47,29 @@ $(function () {
         $.get('http://192.168.100.77:8000/get-product-details/' + encodeURI(productName), loadProductDetailsCallback);
     }
 
+    function displayDetails(productVariant){
+      // debugger;
+      $('#productVariant').html(productVariant.name);
+      $('#productDescription').html(productVariant.caracteristics);
+      $('#productScreenSize').html(productVariant.screen_size);
+      $('#productMemory').html(productVariant.memory);
+      $('#productCamera').html(productVariant.camera);
+    }
+
     function loadProductDetailsCallback(data){
 
-        var defaultVariant = data[0];
+      displayDetails(data[0]);
 
-        $('#productVariant').html(defaultVariant.name);
-        $('#productDescription').html(defaultVariant.caracteristics);
-        $('#productScreenSize').html(defaultVariant.screen_size);
-        $('#productMemory').html(defaultVariant.memory);
-        $('#productCamera').html(defaultVariant.camera);
+      for (var i = 0; i < data.length; i++) {
+        $('#variantList').append('<li data-index="' + i + '">' + data[i].name + '</li>');
+      }
 
-        for (var i = 0; i < data.length; i++) {
-            $('#variantList').append('<li>' + data[i].name + '</li>')
-        }
+      $("#variantList li").click(function () {
+        var selectedIndex = $(this).data('index');
+        displayDetails(data[selectedIndex]);
+      });
 
-        $('#productDetails').show();
+      $('#productDetails').show();
     }
 
 });

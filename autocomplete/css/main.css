@@ -15,3 +15,7 @@
 }
 
 .selectize-dropdown-content {max-height: 80vh; }
+
+#variantList li {
+  cursor: pointer;
+}
