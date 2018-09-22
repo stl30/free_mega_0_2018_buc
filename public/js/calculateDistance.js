@@ -8,7 +8,6 @@ var coordsToDisplay;
 
 
 function compare(dest1, dest2) {
-
     if (dest1.distanceDuration.duration.value < dest2.distanceDuration.duration.value) {
         return -1;
     }
@@ -72,14 +71,19 @@ function renderDistances(sortedDestinationsList){
 
     var ul = [];
     for(var i = 0; i<sortedDestinationsList.length; i++){
-        var li = '<strong>' + locationName + '</strong>'+
+        debugger;
+        var li = '<strong>' + sortedDestinationsList[i].locationName + '</strong>'+
                 '<br>'+
-                address +
+                '<em>' + sortedDestinationsList[i].distanceDuration.duration.text +'</em>' +
                 '<br>' +
-                contact.email +
+                sortedDestinationsList[i].address +
                 '<br>' +
-                contact.phone
-        ul.push(li)
+                sortedDestinationsList[i].contact.email +
+                '<br>' +
+                sortedDestinationsList[i].contact.phone;
+
+        ul.push('<li>'+li+'</li>');
+
     }
 
     var HTML_ul = '<ul>' + ul.join() + '</ul>';
