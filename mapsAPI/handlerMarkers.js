@@ -8,7 +8,8 @@ var locations = [
     ['Magazin Vodafone - Bucuresti Stefan cel Mare', 44.45302, 26.09957, 1]
 ];
 
-function initMap() {
+function initMap(coordsToDisplay) {
+    debugger;
     infoWindow = new google.maps.InfoWindow;
 
     // Try HTML5 geolocation.

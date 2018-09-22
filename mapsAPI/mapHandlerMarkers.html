@@ -23,7 +23,9 @@
             <!--integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="-->
             <!--crossorigin="anonymous"></script>-->
 
-    <script src="handlerMarkers.js"></script>
+    <!-- <script src="handlerMarkers.js"></script> -->
+
+    <script src="vendor/jquery-3.3.1.min.js"></script>
 
 </head>
 <body>
@@ -35,6 +37,20 @@
 </div>
 
 <div id="map"></div>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxL4QF3L0Y3VPkVIHWrgFzQvMujGzQv8M&callback=initMap" type="text/javascript"></script>
+
+<div id="mapsApiScripts">
+
+</div>
+
+<!-- <script src="app.js"></script> -->
+
+<script src="handlerMarkers.js"></script>
+<script src="calculateDistance.js"></script>
+
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxL4QF3L0Y3VPkVIHWrgFzQvMujGzQv8M&callback=getTimeUntill">
+</script>
+
+
 </body>
 </html>
