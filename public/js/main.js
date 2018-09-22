@@ -1,20 +1,14 @@
 $(function () {
+    window.storeData;
     var productList = [];
     $.get('http://192.168.100.77:8000/get-products', loadProductListCallback);
     // $.get('data/get-products.json', loadProductListCallback);
     initEvents();
-    function initEvents(){
-        $('#showMap').on('click', function(){
+    function initEvents() {
+        $('#showMap').on('click', function () {
             $('#mapDetails').show();
-            initMapScript();
+            $(document).trigger("renderMap");
         });
-    }
-
-    function initMapScript(){
-        var mapScript = '<script async defer ' +
-            'src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxL4QF3L0Y3VPkVIHWrgFzQvMujGzQv8M&callback=initMaps">' +
-            '</script>';
-        $('#mapScriptLocation').html(mapScript);
     }
 
     function loadProductListCallback(data) {
@@ -60,7 +54,9 @@ $(function () {
         $.get('http://192.168.100.77:8000/get-product-details/' + encodeURI(productName), loadProductDetailsCallback);
     }
 
-    function loadProductDetailsCallback(data){
+    function loadProductDetailsCallback(data) {
+        window.storeData = data[0].stores;
+        debugger;
 
         var defaultVariant = data[0];
 

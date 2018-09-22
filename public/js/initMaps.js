@@ -1,5 +1,17 @@
 function initMaps(){
 
+    var destinationsList = [];
+
+    for(var i=0; i< window.storeData.length; i++){
+        destinationsList.push(
+            {
+                locationName: window.storeData[i].dealer_name,
+                lat: parseFloat(window.storeData[i].latitude),
+                lng: parseFloat(window.storeData[i].longitude)
+            }
+        )
+    }
+
     var destinationB = {
         locationName: "LocB",
         lat: 44.46071, lng: 26.0742, distanceDuration: {
@@ -9,11 +21,6 @@ function initMaps(){
         }
     };
     
-    var destinationA = { locationName: "LocA", lat: 44.44095, lng: 26.10002, distanceDuration: {} };
-    var destinationC = {locationName: "LocB", lat: 44.45302, lng: 26.09957, distanceDuration: {} };
-    
-    var destinationsList = [destinationC, destinationA, destinationB];
-
 
     var origin1 = { lat: 44.477516, lng: 26.103049 }; //some default location
 
@@ -33,3 +40,11 @@ function initMaps(){
     getTimeUntill(destinationsList,origin1);
 
 }
+
+$(document).on( "renderMap", function() {
+
+    $.getScript("https://maps.googleapis.com/maps/api/js?key=AIzaSyBxL4QF3L0Y3VPkVIHWrgFzQvMujGzQv8M&callback=initMaps", function (storeData) {
+
+     });
+     
+});
