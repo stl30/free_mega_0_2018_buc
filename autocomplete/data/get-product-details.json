@@ -1,0 +1,67 @@
+[
+  {
+    "id": 1,
+    "sku_id": "",
+    "nume_produs": "Samsung Galaxy S9 Plus",
+    "name": "Samsung Galaxy S9 Plus 256 GB Negru 4G+",
+    "producator": "Samsung",
+    "caracteristics": "Senzor Amprenta, Memorie Expandabila,Incarcare Wireless , Rezistent la Apa , Mufa Jack ",
+    "screen_size": "Peste 5.4inch ",
+    "camera": "10-12 MP",
+    "memory": "Peste 64 GB",
+    "created_at": "2018-09-22 16:33:18",
+    "updated_at": "2018-09-22 16:33:18"
+  },
+  {
+    "id": 48,
+    "sku_id": "",
+    "nume_produs": "Samsung Galaxy S9 Plus",
+    "name": "Samsung Galaxy S9 Plus 64 GB Albastru Inchis 4G+",
+    "producator": "Samsung",
+    "caracteristics": "Senzor Amprenta, Memorie Expandabila,Incarcare Wireless , Rezistent la Apa , Mufa Jack ",
+    "screen_size": "Peste 5.4inch ",
+    "camera": "10-12 MP",
+    "memory": "64 GB",
+    "created_at": "2018-09-22 16:33:18",
+    "updated_at": "2018-09-22 16:33:18"
+  },
+  {
+    "id": 60,
+    "sku_id": "",
+    "nume_produs": "Samsung Galaxy S9 Plus",
+    "name": "Samsung Galaxy S9 Plus 64 GB Auriu 4G+",
+    "producator": "Samsung",
+    "caracteristics": "Senzor Amprenta, Memorie Expandabila,Incarcare Wireless , Rezistent la Apa , Mufa Jack ",
+    "screen_size": "Peste 5.4inch ",
+    "camera": "10-12 MP",
+    "memory": "64 GB ",
+    "created_at": "2018-09-22 16:33:18",
+    "updated_at": "2018-09-22 16:33:18"
+  },
+  {
+    "id": 86,
+    "sku_id": "",
+    "nume_produs": "Samsung Galaxy S9 Plus",
+    "name": "Samsung Galaxy S9 Plus 64 GB Negru 4G+",
+    "producator": "Samsung",
+    "caracteristics": "Senzor Amprenta, Memorie Expandabila,Incarcare Wireless , Rezistent la Apa , Mufa Jack ",
+    "screen_size": "Peste 5.4inch ",
+    "camera": "10-12 MP",
+    "memory": "64 GB ",
+    "created_at": "2018-09-22 16:33:18",
+    "updated_at": "2018-09-22 16:33:18"
+  },
+  {
+    "id": 7,
+    "sku_id": "",
+    "nume_produs": "Samsung Galaxy S9 Plus",
+    "name": "Samsung Galaxy S9 Plus 64 GB Violet 4G+",
+    "producator": "Samsung",
+    "caracteristics": "Senzor Amprenta, Memorie Expandabila,Incarcare Wireless , Rezistent la Apa , Mufa Jack ",
+    "screen_size": "Peste 5.4inch ",
+    "camera": "10-12 MP",
+    "memory": "64 GB ",
+    "created_at": "2018-09-22 16:33:18",
+    "updated_at": "2018-09-22 16:33:18"
+  }
+]
