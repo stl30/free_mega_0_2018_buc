@@ -1,5 +1,5 @@
-var origin1 = { lat: 44.477516, lng: 26.103049 };
-    
+var origin = { lat: 44.477516, lng: 26.103049 };
+
 var destinationB = {
     locationName: "LocB",
     lat: 44.46071, lng: 26.0742, distanceDuration: {
@@ -10,9 +10,10 @@ var destinationB = {
 };
 
 var destinationA = { locationName: "LocA", lat: 44.44095, lng: 26.10002, distanceDuration: {} };
-var destinationC = {locationName: "LocB", lat: 44.45302, lng: 26.09957, distanceDuration: {} };
+var destinationC = { locationName: "LocB", lat: 44.45302, lng: 26.09957, distanceDuration: {} };
 
 var destinationsList = [destinationC, destinationA, destinationB];
+
 var travelMode = 'DRIVING';
 ///https://developers.google.com/maps/documentation/javascript/directions#TravelModes
 
@@ -33,7 +34,7 @@ function compare(dest1, dest2) {
     return 0;
 }
 
-function getTimeUntill() {
+function getTimeUntill(destinationsList, origin1) {
 
     var service = new google.maps.DistanceMatrixService;
     service.getDistanceMatrix({
@@ -66,11 +67,11 @@ function getTimeUntill() {
 }
 
 
-function getCoordsToDisplay(sortedDestinationsListArg){
+function getCoordsToDisplay(sortedDestinationsListArg) {
 
     var coordsToDsipaly = [];
 
-    for(var i= 0; i<sortedDestinationsListArg.length; i++){
+    for (var i = 0; i < sortedDestinationsListArg.length; i++) {
         coordsToDsipaly.push(
             [
                 sortedDestinationsList[i].locationName,
