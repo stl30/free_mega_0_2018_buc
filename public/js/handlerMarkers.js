@@ -6,6 +6,9 @@ var locations = [];
 
 function initMap(coordsToDisplay,origin1) {
 
+    var directionsDisplay = new google.maps.DirectionsRenderer;
+    var directionsService = new google.maps.DirectionsService;
+
     infoWindow = new google.maps.InfoWindow;
     locations = coordsToDisplay;
 
@@ -14,11 +17,6 @@ function initMap(coordsToDisplay,origin1) {
 
         navigator.geolocation.getCurrentPosition(function (position) {
 
-            // var pos = {
-            //     lat: position.coords.latitude,
-            //     lng: position.coords.longitude
-            // };
-
             myCurrentLocation = origin1;
 
             map = new google.maps.Map(document.getElementById('map'), {
@@ -26,8 +24,13 @@ function initMap(coordsToDisplay,origin1) {
                 center: myCurrentLocation
             });
 
+            directionsDisplay.setMap(map);
+
+            calculateAndDisplayRoute(directionsService, directionsDisplay,  origin1.lat, origin1.lng, coordsToDisplay[0][1], coordsToDisplay[0][2]);
+
+
             infoWindow.setPosition(origin1);
-            infoWindow.setContent('Location found.');
+            infoWindow.setContent('<strong>You are here!<strong');
             infoWindow.open(map);
         }, function () {
             handleLocationError(true, infoWindow, map.getCenter());
@@ -118,3 +121,23 @@ function deleteMarkers() {
     clearMarkers();
     markers = [];
 }
+
+
+
+function calculateAndDisplayRoute(directionsService, directionsDisplay, sartLat, startLng, entLat, endLng) {
+debugger;
+    directionsService.route({
+      origin: {lat:  parseFloat(sartLat), lng:  parseFloat(startLng)},  // Haight.
+      destination: {lat:  parseFloat(entLat), lng:  parseFloat(endLng)},  // Ocean Beach.
+      // Note that Javascript allows us to access the constant
+      // using square brackets and a string value as its
+      // "property."
+      travelMode: 'DRIVING'
+    }, function(response, status) {
+      if (status == 'OK') {
+        directionsDisplay.setDirections(response);
+      } else {
+        console.log('Directions request failed due to ' + status);
+      }
+    });
+  }

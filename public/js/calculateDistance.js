@@ -71,7 +71,6 @@ function renderDistances(sortedDestinationsList){
 
     var ul = [];
     for(var i = 0; i<sortedDestinationsList.length; i++){
-        debugger;
         var li = '<strong>' + sortedDestinationsList[i].locationName + '</strong>'+
                 '<br>'+
                 '<em>' + sortedDestinationsList[i].distanceDuration.duration.text +'</em>' +
