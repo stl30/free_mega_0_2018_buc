@@ -19,6 +19,16 @@ class ProductStoreTable extends Migration
             $table->integer('store_id')->unsigned();
 
             $table->timestamps();
+            
+            $table->foreign('product_id')
+                    ->references('id')
+                    ->on('products')
+                    ->onDelete('cascade');
+            
+            $table->foreign('store_id')
+                    ->references('id')
+                    ->on('stores')
+                    ->onDelete('cascade');
         });
 
     }

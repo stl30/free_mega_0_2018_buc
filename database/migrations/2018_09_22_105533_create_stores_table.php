@@ -16,22 +16,22 @@ class CreateStoresTable extends Migration
         Schema::create('stores', function (Blueprint $table) {
             $table->increments('id');
             $table->string('dealer_name');
-            $table->string('city');
-            $table->string('county');
-            $table->string('address');
-            $table->string('phone');
-            $table->string('email');
-            $table->string('monday');
-            $table->string('tuesday');
-            $table->string('wednesday');
-            $table->string('thursday');
-            $table->string('friday');
-            $table->string('saturday');
-            $table->string('sunday');
-            $table->string('latitude');
-            $table->string('longitude');
-            $table->string('shop_profile');
-            $table->string('postal_code');
+            $table->string('city')->default('');
+            $table->string('county')->default('');
+            $table->string('address')->default('');
+            $table->string('phone')->default('');
+            $table->string('email')->default('');
+            $table->string('monday')->default('');
+            $table->string('tuesday')->default('');
+            $table->string('wednesday')->default('');
+            $table->string('thursday')->default('');
+            $table->string('friday')->default('');
+            $table->string('saturday')->default('');
+            $table->string('sunday')->default('');
+            $table->string('latitude')->default('');
+            $table->string('longitude')->default('');
+            $table->string('shop_profile')->default('');
+            $table->string('postal_code')->default('');
 
             $table->timestamps();
         });

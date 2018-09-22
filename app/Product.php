@@ -8,7 +8,18 @@ class Product extends Model
 {
     //
     protected $fillable = [
+        'sku_id',
         'nume_produs',
-        'caracteristics'
+        'name',
+        'producator',
+        'caracteristics',
+        'screen_size',
+        'camera',
+        'memory'
     ];
+
+    //
+    public function store(){
+        return $this->belongsToMany('App\Store');
+    }
 }
