@@ -1,0 +1,31 @@
+body,
+.map-info * {
+    font-family: 'Overpass', sans-serif;
+}
+b,
+strong,
+.table th,
+dt,
+.wt500,
+.section-title-medium,
+.section-title-upper,
+.section-title-upper-small,
+.dropcap,
+.label,
+.navbar .navbar-nav > li > a,
+.navbar .mega-menu h3,
+.btn,
+.tp-caption.w-medium,
+.icon .number,
+.nav-tabs > li > a,
+.panel-group .panel-heading .panel-title,
+label,
+.badge {
+    font-weight: 600;
+}
+@media (max-width: 767px) {
+    .nav-tabs-lined.nav-tabs-lined-top.flex-center > li > a,
+    .nav-tabs-lined.nav-tabs-lined-top.flex-center > li > a h5 {
+        font-weight: 600;
+    }
+}

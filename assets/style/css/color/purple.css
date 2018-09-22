@@ -1,0 +1,263 @@
+
+.disc:after {
+    background: rgba(199, 115, 223, 0.7)
+}
+.overlay.color span.bg {
+    background: rgba(199, 115, 223, 0.8);
+}
+.overlay6.color:after,
+.overlay6.color:before {
+    background: rgba(199, 115, 223, 0.5);
+}
+.overlay8.color figcaption {
+    background: rgba(199, 115, 223, 0.8);
+}
+.page-loading .spinner,
+.tp-loader.spinner,
+.lg-outer .lg-item:after,
+.fotorama__wrap--css3 .fotorama__spinner {
+    border-left: 3px solid rgba(199, 115, 223, .15);
+    border-right: 3px solid rgba(199, 115, 223, .15);
+    border-bottom: 3px solid rgba(199, 115, 223, .15);
+    border-top: 3px solid rgba(199, 115, 223, .8);
+}
+#scrollUp .btn {
+    background: rgba(199, 115, 223, 0.8);
+}
+#scrollUp .btn:hover,
+#scrollUp .btn:focus,
+#scrollUp .btn:active,
+#scrollUp .btn.active {
+    background: rgba(199, 115, 223, 1);
+}
+a.hover:hover {
+    border-bottom: 1px solid #c78ed7;
+}
+a {
+    color: #c78ed7;
+}
+a:hover,
+a:focus {
+    text-decoration: none;
+    color: #c78ed7;
+}
+.color-wrapper {
+    background: #c78ed7;
+}
+.navbar .nav > li > a:hover,
+.navbar .nav > li.active > a,
+.navbar .navbar-other a.nav-link:hover {
+    background: none;
+    color: #c78ed7
+}
+.btn-group .dropdown-menu > li > a:hover,
+.btn-group .dropdown-menu > li > a:focus {
+    color: #c78ed7;
+}
+.btn {
+    background: #c78ed7;
+}
+.btn-border {
+    border: 2px solid #c78ed7;
+    background: none;
+    color: #c78ed7;
+}
+.btn:hover,
+.btn:focus,
+.btn:active,
+.btn.active {
+    background: #b97cca;
+}
+.btn-border:hover,
+.btn-border:focus,
+.btn-border:active,
+.btn-border.active {
+    border: 2px solid #c78ed7;
+    background: #c78ed7;
+}
+.fotorama__nav__frame.fotorama__nav__frame--thumb.fotorama__active:before {
+    border: 2px solid #c78ed7;
+}
+.isotope-filter ul li a:hover,
+.isotope-filter ul li a.active {
+    color: #c78ed7;
+}
+.size-picker span.active {
+    background: #c78ed7;
+}
+.post-title a:hover,
+.more:hover,
+.meta a:hover {
+    color: #c78ed7;
+}
+.meta.price {
+    color: #c78ed7;
+}
+.post-nav-wrapper a:hover {
+    color: #c78ed7;
+}
+.sidebox a:hover {
+    color: #c78ed7
+}
+#comments .info h5 a:hover {
+    color: #c78ed7;
+}
+.image-list li a:hover {
+    color: #c78ed7
+}
+.icon-color,
+.text-color,
+.circle .progressbar-text {
+    color: #c78ed7
+}
+.icon-border {
+    border: 3px solid #c78ed7;
+}
+.icon-bg {
+    background: #c78ed7;
+}
+.nav-tabs > li > a:hover,
+.nav-tabs > li > a:hover *,
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a *,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+    color: #c78ed7;
+}
+.nav-tabs-lined.nav-tabs-lined-bottom > li.active > a:after {
+    border-bottom: 1px solid #c78ed7;
+}
+.nav-tabs-lined.nav-tabs-lined-top > li.active > a:after {
+    border-top: 1px solid #c78ed7;
+}
+.panel-group-lined .panel-active .panel-heading .panel-title {
+    border-bottom: 1px solid #c78ed7;
+    color: #c78ed7;
+}
+.panel-group-lined .panel-title > a:active {
+    color: #c78ed7;
+}
+.timeline.dot .timeline-icon:before {
+	background: #c78ed7;
+}
+.tooltip-inner {
+    background-color: #c78ed7;
+}
+.tooltip.top .tooltip-arrow,
+.tooltip.top-left .tooltip-arrow,
+.tooltip.top-right .tooltip-arrow {
+    border-top-color: #c78ed7
+}
+.tooltip.right .tooltip-arrow {
+    border-right-color: #c78ed7
+}
+.tooltip.left .tooltip-arrow {
+    border-left-color: #c78ed7
+}
+.tooltip.bottom .tooltip-arrow,
+.tooltip.bottom-left .tooltip-arrow,
+.tooltip.bottom-right .tooltip-arrow {
+    border-bottom-color: #c78ed7
+}
+.pagination ul > li > a:hover,
+.pagination ul > .active > a span {
+    color: #c78ed7
+}
+textarea:focus,
+textarea.form-control:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {
+    border-color: #c78ed7
+}
+input[type="radio"]:focus + span,
+input[type="checkbox"]:focus + span,
+input[type="radio"]:active + span,
+input[type="checkbox"]:active + span {
+    border-color: #c78ed7
+}
+input[type="radio"].error + span,
+input[type="checkbox"].error + span {
+    border-color: #c78ed7
+}
+input[type="radio"] + span::after {
+    background-color: #c78ed7;
+    border-color: #c78ed7;
+}
+input[type="radio"]:checked + span,
+input[type="checkbox"]:checked + span {
+    border: 1px solid #c78ed7
+}
+input[type="checkbox"] + span::after {
+    border: 0 solid #c78ed7;
+}
+.bg-default {
+    background: #c78ed7
+}
+.progressbar.border {
+	border-color: #c78ed7;
+}
+.progressbar svg path:last-child {
+    stroke: #c78ed7;
+}
+.page-loading .caption {
+    color: #c78ed7;
+}
+.inverse-text.dark-wrapper .pagination:not(.boxed):not(.round) ul > li > a:hover,
+.inverse-text.dark-wrapper .pagination.round-simple ul > li > a:hover,
+.inverse-text a:not(.btn):not([class*="color-s-"]):hover,
+.inverse-text .isotope-filter ul li a:hover,
+.inverse-text .isotope-filter ul li a.active,
+.inverse-text .text-color {
+    color: #c78ed7 !important;
+}
+.inverse-text .post-title a:hover,
+.inverse-text .bg-white .meta a:hover,
+.inverse-text .bg-white a.more:hover,
+.inverse-text .pagination:not(.boxed):not(.round) ul > li > a:hover,
+.inverse-text .pagination.round-simple ul > li > a:hover {
+    color: #c78ed7 !important;
+}
+.inverse-text:not(.navbar):not(.nav-wrapper) textarea:focus,
+.inverse-text:not(.navbar):not(.nav-wrapper) input[type="text"]:focus,
+.inverse-text:not(.navbar):not(.nav-wrapper) input[type="password"]:focus,
+.inverse-text:not(.navbar):not(.nav-wrapper) input[type="datetime"]:focus,
+.inverse-text:not(.navbar):not(.nav-wrapper) input[type="datetime-local"]:focus,
+.inverse-text:not(.navbar):not(.nav-wrapper) input[type="date"]:focus,
+.inverse-text:not(.navbar):not(.nav-wrapper) input[type="month"]:focus,
+.inverse-text:not(.navbar):not(.nav-wrapper) input[type="time"]:focus,
+.inverse-text:not(.navbar):not(.nav-wrapper) input[type="week"]:focus,
+.inverse-text:not(.navbar):not(.nav-wrapper) input[type="number"]:focus,
+.inverse-text:not(.navbar):not(.nav-wrapper) input[type="email"]:focus,
+.inverse-text:not(.navbar):not(.nav-wrapper) input[type="url"]:focus,
+.inverse-text:not(.navbar):not(.nav-wrapper) input[type="search"]:focus,
+.inverse-text:not(.navbar):not(.nav-wrapper) input[type="tel"]:focus,
+.inverse-text:not(.navbar):not(.nav-wrapper) input[type="color"]:focus,
+.inverse-text:not(.navbar):not(.nav-wrapper) .uneditable-input:focus {
+    border-color: #c78ed7;
+}
+.inverse-text:not(.navbar):not(.nav-wrapper) input[type="radio"]:checked + span,
+.inverse-text:not(.navbar):not(.nav-wrapper) input[type="checkbox"]:checked + span {
+    border-color: #c78ed7
+}
+@media (min-width: 992px) {
+    .navbar .navbar-nav > li > a.highlighted {
+	    color: #c78ed7
+	}
+	.inverse-text .navbar-nav > li:not(.active) > a:not(.highlighted):hover,
+	.inverse-text .navbar-nav > li > a:hover {
+		color: #c78ed7 !important
+	}
+}

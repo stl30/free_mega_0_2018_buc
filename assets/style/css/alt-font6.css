@@ -1,0 +1,129 @@
+body,
+.map-info * {
+    font-family: 'Zilla Slab', serif;
+}
+b,
+strong,
+.table th,
+dt,
+.wt500,
+.section-title-medium,
+.section-title-upper,
+.section-title-upper-small,
+.dropcap,
+.label,
+.navbar .navbar-nav > li > a,
+.navbar .mega-menu h3,
+.btn,
+.tp-caption.w-medium,
+.icon .number,
+.nav-tabs > li > a,
+.panel-group .panel-heading .panel-title,
+label,
+.badge {
+    font-weight: 600;
+}
+@media (max-width: 767px) {
+    .nav-tabs-lined.nav-tabs-lined-top.flex-center > li > a,
+    .nav-tabs-lined.nav-tabs-lined-top.flex-center > li > a h5 {
+        font-weight: 600;
+    }
+}
+.badge-s {
+    line-height: 16px;
+    font-weight: 600;
+}
+h1 {
+    font-size: 27px;
+    line-height: 34px;
+}
+h1.post-title,
+h2.post-title,
+h2 {
+    font-size: 25px;
+    line-height: 32px;
+}
+h1.page-title,
+h3 {
+    font-size: 23px;
+    line-height: 30px;
+}
+h3.post-title,
+h4 {
+    font-size: 21px;
+    line-height: 28px;
+}
+h5 {
+    font-size: 19px;
+    line-height: 26px;
+}
+h6 {
+    font-size: 17px;
+    line-height: 23px;
+}
+.section-title {
+    font-size: 36px;
+    line-height: 44px;
+}
+.section-title.larger {
+    font-size: 42px;
+    line-height: 50px;
+}
+.section-title-medium {
+    font-size: 30px;
+    line-height: 38px;
+}
+.section-title-upper {
+    font-size: 20px;
+    line-height: 34px;
+}
+.section-title-upper-small {
+    font-size: 17px;
+    line-height: 27px;
+}
+.heading {
+    font-size: 48px;
+    line-height: 56px;
+}
+.sub-heading {
+    font-size: 32px;
+    line-height: 38px;
+}
+.navbar .navbar-nav > li > a {
+    font-size: 15px;
+}
+.navbar-nav .dropdown-menu li a {
+    font-size: 14px;
+}
+body,
+.map-info p,
+#lg-counter,
+.lg-sub-html p,
+select,
+textarea,
+textarea.form-control,
+input[type="text"]:not(.qty),
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input,
+.product-quantity input {
+    font-size: 15px;
+}
+.meta:not(.breadcrumbs),
+a.more {
+    font-size: 13px;
+}
+.meta.breadcrumbs {
+    font-size: 14px;
+}
