@@ -1,0 +1,1 @@
+browser-sync ./ -w  --files "**/*, \!./**/*.bat"
