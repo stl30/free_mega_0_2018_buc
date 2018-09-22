@@ -4,20 +4,29 @@
     $(function(){
         var data = []
 
-        function updateDates(){
-            console.log(data);
+        function updateDates(data){
             $.each(data, function(i, product){
                 $.each(product.stores, function(j, store){
-                    console.log(store);
-                    moment().format('l')
+                    var days = ['sunday','monday','tuesday','wednesday','thursday','friday','saturday'];
+
+                    var dayOfMonth = days[moment().day()];
+                    
+                    data[i].stores[j]['open'] = store[dayOfMonth].split(' - ');
+
+                    $('.stores').append(store['dealer_name'] + '<br />');
                 })
             })
+            return data;
         }
 
         $.get('http://192.168.100.77:8000/get-product-details/Alcatel%2020.08%20Negru')
         .then(function(res){
             data = res;
-            updateDates();
+            data = updateDates(data);
+
+            console.log(data);
+            
         })
     })
 </script>
+<div class="stores"></div>
