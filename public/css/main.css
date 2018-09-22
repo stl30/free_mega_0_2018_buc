@@ -32,3 +32,7 @@ html, body, #map-container, #map {
 #map {
     height: 100%;
 }
+
+#variantList li {
+    cursor: pointer;
+}
