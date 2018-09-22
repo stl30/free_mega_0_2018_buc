@@ -12,12 +12,13 @@ class ImportController extends Controller
 {
     //
     public function doIt(){
-        
+
         DB::statement('SET foreign_key_checks=0');
         Store::truncate();
         Product::truncate();
+        DB::table('product_store')->truncate();
         DB::statement('SET foreign_key_checks=1');
-
+        
         $stores = $this->parseCSV(storage_path('data/stores.csv'));
 
         // $products = collect($products);
@@ -57,54 +58,77 @@ class ImportController extends Controller
         $counter = 0;
 
         foreach($productsCSV as $prod){
-            $prdName = $prod[2]; 
-            $prdVariation = $prod[3]; 
-            if(!isset($prdImport[$prdName])){
-                $prdImport[$prdName] = [];
+            $prd = Product::updateOrCreate(
+                [
+                    'nume_produs' => $prod[2],
+                    'name' => $prod[3]
+                ],
+                [
+                    'nume_produs' => $prod[2],
+                    'name' => $prod[3],
+                    'producator' => $prod[4],
+                    'caracteristics' => $prod[5],
+                    'screen_size' => $prod[6],
+                    'camera' => $prod[7],
+                    'memory' => $prod[8]
+                ]
+            );
+
+            $store = Store::where('dealer_name', $prod[9])
+                            ->first();
+            if($store){
+                $prd->store()->attach($store->id);
             }
+            
+            continue;
+        //     $prdName = $prod[2]; 
+        //     $prdVariation = $prod[3]; 
+        //     if(!isset($prdImport[$prdName])){
+        //         $prdImport[$prdName] = [];
+        //     }
 
-            if(!isset($prdImport[$prdName][$prdVariation])){
-                $prdImport[$prdName][$prdVariation] = [];
-                $prdImport[$prdName][$prdVariation]['stores'] = [];
-                $prdImport[$prdName][$prdVariation]['info'] = $prod;
-            }
+        //     if(!isset($prdImport[$prdName][$prdVariation])){
+        //         $prdImport[$prdName][$prdVariation] = [];
+        //         $prdImport[$prdName][$prdVariation]['stores'] = [];
+        //         $prdImport[$prdName][$prdVariation]['info'] = $prod;
+        //     }
 
-            if(!in_array($prod[9],$prdImport[$prdName][$prdVariation]['stores'])){
-                $prdImport[$prdName][$prdVariation]['stores'][] = $prod[9];
-            }
+        //     if(!in_array($prod[9],$prdImport[$prdName][$prdVariation]['stores'])){
+        //         $prdImport[$prdName][$prdVariation]['stores'][] = $prod[9];
+        //     }
 
-            // = $prod;
-        }
+        //     // = $prod;
+        // }
 
-        foreach($prdImport as $prdName => $prdData){
-            foreach($prdData as $prdVariation => $prdVariationData){
-                // echo '<pre>';
-                // print_r($prdVariationData);
-                // echo '</pre>';
-                $prd = Product::create([
-                            'nume_produs' => $prdName,
-                            'name' => $prdVariation,
+        // foreach($prdImport as $prdName => $prdData){
+        //     foreach($prdData as $prdVariation => $prdVariationData){
+        //         // echo '<pre>';
+        //         // print_r($prdVariationData);
+        //         // echo '</pre>';
+        //         $prd = Product::create([
+        //                     'nume_produs' => $prdName,
+        //                     'name' => $prdVariation,
 
 
-                            //'sku_id' => $prdVariationData[1],
-                            'producator' => $prdVariationData['info'][4],
-                            'caracteristics' => $prdVariationData['info'][5],
-                            'screen_size' => $prdVariationData['info'][6],
-                            'camera' => $prdVariationData['info'][7],
-                            'memory' => $prdVariationData['info'][8]
-                        ]);
+        //                     //'sku_id' => $prdVariationData[1],
+        //                     'producator' => $prdVariationData['info'][4],
+        //                     'caracteristics' => $prdVariationData['info'][5],
+        //                     'screen_size' => $prdVariationData['info'][6],
+        //                     'camera' => $prdVariationData['info'][7],
+        //                     'memory' => $prdVariationData['info'][8]
+        //                 ]);
 
-                 echo '<h1>'.$prd->id.'</h1>';
+        //          echo '<h1>'.$prd->id.'</h1>';
 
-                foreach( $prdVariationData['stores'] as $storeName){
-                    $store = Store::where('dealer_name', $storeName)
-                                    ->first();
-                    if($store){
-                        $prd->store()->attach($store->id);
-                    }
-                    echo '<br/>'.(++$counter).'. '.$storeName;
-                }    
-            }
+        //         foreach( $prdVariationData['stores'] as $storeName){
+        //             $store = Store::where('dealer_name', $storeName)
+        //                             ->first();
+        //             if($store){
+        //                 $prd->store()->attach($store->id);
+        //             }
+        //             echo '<br/>'.(++$counter).'. '.$storeName;
+        //         }    
+        //     }
         }
 
         //$file = storage_path('stores.csv');

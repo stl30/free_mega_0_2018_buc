@@ -17,8 +17,8 @@ class ProductController extends Controller
     public function index()
     {
         //
-        return Product::select([DB::raw('min(id) as id'), 'nume_produs'])
-                        ->groupBy('nume_produs')
+        return Product::select('id', 'nume_produs')
+                        // ->groupBy('nume_produs')
                         ->get();
     }
 
