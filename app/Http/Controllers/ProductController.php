@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Product;
 use Illuminate\Http\Request;
 
+use DB;
+
 class ProductController extends Controller
 {
     /**
@@ -15,7 +17,9 @@ class ProductController extends Controller
     public function index()
     {
         //
-        return Product::all();
+        return Product::select([DB::raw('min(id) as id'), 'nume_produs'])
+                        ->groupBy('nume_produs')
+                        ->get();
     }
 
     /**

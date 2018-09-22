@@ -14,44 +14,54 @@ class ImportController extends Controller
     public function doIt(){
         Store::truncate();
         Product::truncate();
-        DB::table('product_store')->delete();
 
-        $file = storage_path('stocks.csv');
-        $file = storage_path('stocks.csv');
+        DB::table('product_store')->delete();
+        $data = $this->parseCSV(storage_path('data/stocks.csv'));
+        //dd($data);
+        foreach($data as $prod){
+            array_shift($prod);
+            Product::create([
+                'nume_produs' => $prod[1],
+                'caracteristics' => $prod[4]
+            ]);
+        }
+
+        //dd($data);
+
+        //$file = storage_path('stores.csv');
 
         dd(123);
     }
 
-    public function i(){
-        /*
-        echo '<pre>';
-        print_r($data);
-        echo '</pre>';
+    
 
-        function parseCSV($fileName){
+    private function parseCSV($fileName){
 
-            $result = [];
-            $handle = fopen($fileName, "r");
-            if ($handle) {
-                while (($line = fgets($handle)) !== false) {
-                    // process the line read.
-                    $result[] = explode(",",$line);
-                    // echo '<pre>';
-                    // print_r($cells);
-                    // echo '</pre>';
+        $result = [];
+        $handle = fopen($fileName, "r");
+        if ($handle) {
+            while (($line = fgets($handle)) !== false) {
+                // if(!strlen(str_replace(',','',$line))){
+                //     continue;
+                // }
+                // process the line read.
+                $prod = explode(",",$line);
+                if(!strlen($prod[2])){
+                    break;
                 }
-            
-                fclose($handle);
-            } else {
-                // error opening the file.
-                die('nah');
+                $result[] = $prod;
+                // echo '<pre>';
+                // print_r($cells);
+                // echo '</pre>';
             }
-
-            array_shift($result);
-            return $result;
+        
+            fclose($handle);
+        } else {
+            // error opening the file.
+            die('nah');
         }
-        */
 
-
+        array_shift($result);
+        return $result;
     }
 }
