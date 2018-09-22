@@ -15,6 +15,7 @@ $(function () {
     function initAutocomplete() {
         var $select = $('#input-tags').selectize({
             persist: false,
+            openOnFocus: false,
             maxItems: 1,
             valueField: 'id',
             searchField: ['nume_produs', 'caracteristics'],
@@ -34,12 +35,10 @@ $(function () {
                 }
             },
             onItemAdd: function(value, $item){
-               // debugger;
                var productName = $item.html();
                console.log("Redirect to: " + productName);
            }
         });
-
     }
 
 
