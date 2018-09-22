@@ -2,15 +2,12 @@ var myCurrentLocation;
 var map;
 var markers = [];
 
-var locations = [
-    ['Magazin Vodafone - Bucuresti Mihalache', 44.46071, 26.0742, 3],
-    ['Magazin Vodafone - Bucuresti Magheru', 44.44095, 26.10002, 2],
-    ['Magazin Vodafone - Bucuresti Stefan cel Mare', 44.45302, 26.09957, 1]
-];
+var locations = [];
 
 function initMap(coordsToDisplay) {
-    debugger;
+
     infoWindow = new google.maps.InfoWindow;
+    locations = coordsToDisplay;
 
     // Try HTML5 geolocation.
     if (navigator.geolocation) {
