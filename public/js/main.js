@@ -1,8 +1,21 @@
 $(function () {
-    console.log('here');
+    var productList = [];
     $.get('http://192.168.100.77:8000/get-products', loadProductListCallback);
     // $.get('data/get-products.json', loadProductListCallback);
-    var productList = [];
+    initEvents();
+    function initEvents(){
+        $('#showMap').on('click', function(){
+            $('#mapDetails').show();
+            initMapScript();
+        });
+    }
+
+    function initMapScript(){
+        var mapScript = '<script async defer ' +
+            'src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxL4QF3L0Y3VPkVIHWrgFzQvMujGzQv8M&callback=initMaps">' +
+            '</script>';
+        $('#mapScriptLocation').html(mapScript);
+    }
 
     function loadProductListCallback(data) {
         productList = data;

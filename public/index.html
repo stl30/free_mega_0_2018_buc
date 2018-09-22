@@ -20,23 +20,27 @@
     <div>Diagonala Ecran: <span id="productScreenSize"></span></div>
     <div>Memorie interna: <span id="productMemory"></span></div>
     <div>Camera: <span id="productCamera"></span></div>
+    <button id="showMap">Show Map</button>
 </div>
 
-<div id="floating-panel">
-    <input onclick="showSelectedMarkers();" type=button value="Show my selected shops">
-    <input onclick="clearMarkers();" type=button value="Hide Markers">
-    <input onclick="redisplayPreviousMarkers();" type=button value="Redisplay prev shops">
-    <input onclick="deleteMarkers();" type=button value="Delete Markers">
-</div>
+<div id="mapDetails" style="display: none;">
+    <div id="floating-panel">
+        <input onclick="showSelectedMarkers();" type=button value="Show my selected shops">
+        <input onclick="clearMarkers();" type=button value="Hide Markers">
+        <input onclick="redisplayPreviousMarkers();" type=button value="Redisplay prev shops">
+        <input onclick="deleteMarkers();" type=button value="Delete Markers">
+    </div>
 
-<div id="map"></div>
+    <div id="map"></div>
+</div>
 
 <script src="js/handlerMarkers.js"></script>
 <script src="js/calculateDistance.js"></script>
 <script src="js/initMaps.js"></script>
 
-<script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxL4QF3L0Y3VPkVIHWrgFzQvMujGzQv8M&callback=initMaps">
-</script>
+<div id="mapScriptLocation">
+
+</div>
+
 </body>
 </html>
