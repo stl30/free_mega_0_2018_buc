@@ -1,0 +1,38 @@
+.option {
+    display: flex;
+}
+
+.option .imgSource {
+    height: 100px;
+}
+
+.option .title {
+    font-weight: bold;
+}
+
+.option .description {
+    margin-top: 10px;
+}
+
+.selectize-dropdown-content {
+    max-height: 80vh;
+}
+
+/* Optional: Makes the sample page fill the window. */
+html, body, #map-container, #map {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#mapDetails{
+    height: 50%;
+}
+
+#map {
+    height: 100%;
+}
+
+#variantList li {
+    cursor: pointer;
+}
