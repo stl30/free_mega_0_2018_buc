@@ -19,7 +19,7 @@ class Product extends Model
     ];
 
     //
-    public function store(){
+    public function stores(){
         return $this->belongsToMany('App\Store');
     }
 }

@@ -77,7 +77,7 @@ class ImportController extends Controller
             $store = Store::where('dealer_name', $prod[9])
                             ->first();
             if($store){
-                $prd->store()->attach($store->id);
+                $prd->stores()->attach($store->id);
             }
             
             continue;

@@ -17,8 +17,9 @@ class ProductController extends Controller
     public function index()
     {
         //
-        return Product::select('id', 'nume_produs')
-                        // ->groupBy('nume_produs')
+        return Product::select([DB::raw('min(id) as id'), 'nume_produs'])
+                        ->groupBy('nume_produs')
+                        ->orderBy('nume_produs')
                         ->get();
     }
 
@@ -49,9 +50,14 @@ class ProductController extends Controller
      * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function show(Product $product)
+    public function show(String $name)
     {
         //
+
+        return Product::where('nume_produs', $name)
+                        ->with('stores')
+                        ->orderBy('name')
+                        ->get();
     }
 
     /**
