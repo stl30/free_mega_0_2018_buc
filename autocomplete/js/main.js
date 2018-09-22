@@ -13,7 +13,7 @@ $(function () {
     }
 
     function initAutocomplete() {
-        $('#input-tags').selectize({
+        var $select = $('#input-tags').selectize({
             persist: false,
             maxItems: 1,
             valueField: 'id',
@@ -32,8 +32,14 @@ $(function () {
                 item: function (data, escape) {
                     return '<div class="item">' + escape(data.nume_produs) + '</div>';
                 }
-            }
+            },
+            onItemAdd: function(value, $item){
+               // debugger;
+               var productName = $item.html();
+               console.log("Redirect to: " + productName);
+           }
         });
+
     }
 
 
