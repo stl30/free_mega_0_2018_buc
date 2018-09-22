@@ -48,15 +48,12 @@ function getTimeUntill(destinationsList, origin1) {
         if (status !== 'OK') {
             alert('Error was: ' + status);
         } else {
-            console.log('the response', response);
 
             for (var i = 0; i < destinationsList.length; i++) {
                 destinationsList[i].distanceDuration = response.rows[0].elements[i];
             }
-            console.log('destinationsList', destinationsList);
 
             sortedDestinationsList = destinationsList.sort(compare);
-            console.log('sortedList', sortedDestinationsList);
 
             coordsToDisplay = getCoordsToDisplay(sortedDestinationsList);
 

@@ -55,8 +55,9 @@ $(function () {
     }
 
     function loadProductDetailsCallback(data) {
+        console.log('stores for phone',  data[0].stores);
+        window.storeData = null;
         window.storeData = data[0].stores;
-        debugger;
 
         var defaultVariant = data[0];
 

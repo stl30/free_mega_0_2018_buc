@@ -46,5 +46,5 @@ $(document).on( "renderMap", function() {
     $.getScript("https://maps.googleapis.com/maps/api/js?key=AIzaSyBxL4QF3L0Y3VPkVIHWrgFzQvMujGzQv8M&callback=initMaps", function (storeData) {
 
      });
-     
+
 });
