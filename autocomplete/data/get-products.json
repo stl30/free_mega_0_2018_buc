@@ -1,0 +1,15 @@
+[{
+  "id": 1,
+  "nume_produs": "test",
+  "caracteristics": "description"
+},
+  {
+    "id": 2,
+    "nume_produs": "test2",
+    "caracteristics": "description2"
+  },
+  {
+    "id": 3,
+    "nume_produs": "test3",
+    "caracteristics": "description3"
+  }]

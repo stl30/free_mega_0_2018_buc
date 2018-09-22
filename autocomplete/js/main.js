@@ -1,25 +1,34 @@
 $(function() {
     console.log('here');
-    $('#input-tags').selectize({
-        persist: false,
-        maxItems: 1,
-        valueField: 'id',
-        searchField: ['title', 'description'],
-        options: [
-            {id: 1, title: 'DIY', description: 'https://diy.org'},
-            {id: 2, title: 'Google', description: 'http://google.com'},
-            {id: 3, title: 'Yahoo', description: 'http://yahoo.com'},
-        ],
-        render: {
-            option: function(data, escape) {
-                return '<div class="option">' +
-                    '<span class="title">' + escape(data.title) + ' </span>' +
-                    '<span class="url">' + escape(data.description) + '</span>' +
-                    '</div>';
-            },
-            item: function(data, escape) {
-                return '<div class="item">' + escape(data.title) + '</div>';
+    // $.get('http://192.168.100.77:8000/get-products', loadCallback);
+    $.get('data/get-products.json', loadCallback);
+    var productList = [];
+
+    function loadCallback(data){
+        productList = data;
+        initAutocomplete();
+    }
+
+    function initAutocomplete(){
+        $('#input-tags').selectize({
+            persist: false,
+            maxItems: 1,
+            valueField: 'id',
+            searchField: ['nume_produs', 'caracteristics'],
+            options: productList,
+            render: {
+                option: function(data, escape) {
+                    return '<div class="option">' +
+                        '<span class="title">' + escape(data.nume_produs) + ' </span>' +
+                        '<span class="url">' + escape(data.caracteristics) + '</span>' +
+                        '</div>';
+                },
+                item: function(data, escape) {
+                    return '<div class="item">' + escape(data.nume_produs) + '</div>';
+                }
             }
-        }
-    });
+        });
+    }
+
+
 });
