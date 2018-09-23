@@ -1,4 +1,6 @@
+var scriptLoaded=false;
 function initMaps(){
+
 
     var destinationsList = [];
 
@@ -47,9 +49,11 @@ function initMaps(){
 }
 
 $(document).on( "renderMap", function() {
+    if(!scriptLoaded){
+        $.getScript("https://maps.googleapis.com/maps/api/js?key=AIzaSyBxL4QF3L0Y3VPkVIHWrgFzQvMujGzQv8M&callback=initMaps", function (storeData) {
 
-    $.getScript("https://maps.googleapis.com/maps/api/js?key=AIzaSyBxL4QF3L0Y3VPkVIHWrgFzQvMujGzQv8M&callback=initMaps", function (storeData) {
-
-     });
+        });
+        scriptLoaded = true;
+    }
 
 });

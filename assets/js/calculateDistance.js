@@ -69,20 +69,20 @@ function getCoordsToDisplay(sortedDestinationsListArg) {
 
 function renderDistances(sortedDestinationsList) {
 
-    var ul = [];
+    var ul = [
+        '<div class="timeline-block" data-aos="fade-down">\n' +
+        '                                <div class="timeline-icon"> <span class="icon icon-bg icon-s mb-20"><i class="et-location-pin"></i></span> </div>\n' +
+        '                                <!-- timeline-icon -->\n' +
+        '\n' +
+        '                                <div class="timeline-content box box-bg bg-white box-arrow left" style="">\n' +
+        '                                    <h5>Distanta in kilometrii de la locatia dumneavostra</h5>\n' +
+        '                                </div>\n' +
+        '                                <!-- timeline-content -->\n' +
+        '                            </div>'
+    ];
     for (var i = 0; i < sortedDestinationsList.length; i++) {
-        var divContent1 = '<strong>' + sortedDestinationsList[i].locationName + '</strong>' +
-            '<br>' +
-            '<em>' + sortedDestinationsList[i].distanceDuration.duration.text + '</em>' +
-            '<br>' +
-            sortedDestinationsList[i].address +
-            '<br>' +
-            sortedDestinationsList[i].contact.email +
-            '<br>' +
-            sortedDestinationsList[i].contact.phone;
 
-        var divContent2 =  
-            '<div class="timeline-block "> ' +
+        var divContent2 = '<div class="timeline-block "> ' +
             '   <div class="timeline-icon">' +
             '     <span class="icon icon-bg icon-xs" style="font-size: 16px;">' 
              +   sortedDestinationsList[i].distanceDuration.duration.text +
