@@ -85,7 +85,7 @@ function isLocationOpened(sechedule) {
 
     var dayAsString = weekday[n];
 
-    return sechedule[dayAsString] !== "- - -";
+    return sechedule[dayAsString] !== "- - -" && sechedule[dayAsString] !== "inchis" && sechedule[dayAsString] !== "closed";
 
 
 }
