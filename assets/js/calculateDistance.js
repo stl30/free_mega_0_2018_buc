@@ -70,7 +70,6 @@ function getCoordsToDisplay(sortedDestinationsListArg) {
 }
 
 function renderDistances(sortedDestinationsList) {
-    debugger;
 
     var ul = [
         '<div class="timeline-block" data-aos="fade-down">\n' +

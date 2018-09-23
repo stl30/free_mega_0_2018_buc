@@ -55,6 +55,8 @@ $(function () {
     }
 
     function displayDetails(productVariant) {
+        trackProductAcess(productVariant.id);
+
         $('#productVariant').html(productVariant.name);
         $('#productDescription').html(productVariant.caracteristics);
         $('#productScreenSize').html(productVariant.screen_size);
@@ -86,6 +88,10 @@ $(function () {
         $('#productDetails').show();
 
         $("html, body").animate({ scrollTop: $('#productDetails').offset().top }, 700);
+    }
+
+    function trackProductAcess(productId){
+        $.get('http://192.168.100.77:8000/reports/view-product-tracking/' + productId);
     }
 
     $('a[href*="#"]').on('click', function (e) {
