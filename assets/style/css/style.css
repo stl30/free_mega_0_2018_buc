@@ -13,7 +13,7 @@ Author:		elemis
 07. STICKY HEADER
 08. HAMBURGER MENU ICON
 09. BUTTON
-10. SLIDER REVOLUTION 
+10. SLIDER REVOLUTION
 11. SLICK
 12. FOTORAMA
 13. COLLAGE
@@ -90,19 +90,19 @@ iframe {
 ::-moz-selection {
     background: #fefac7;
     /* Safari */
-    
+
     color: #404040;
 }
 ::selection {
     background: #fefac7;
     /* Safari */
-    
+
     color: #404040;
 }
 ::-moz-selection {
     background: #fefac7;
     /* Firefox */
-    
+
     color: #404040;
 }
 /*-----------------------------------------------------------------------------------*/
@@ -1592,7 +1592,7 @@ a.has-submenu {
     font-size: 25px;
 }
 /*-----------------------------------------------------------------------------------*/
-/*	10. SLIDER REVOLUTION 
+/*	10. SLIDER REVOLUTION
 /*-----------------------------------------------------------------------------------*/
 
 .rev_slider_wrapper {
@@ -1911,7 +1911,7 @@ a.has-submenu {
 	width: 40px;
 	height: 40px;
 	display: table;
-	text-align: center;	
+	text-align: center;
 }
 .slick .item .link-wrapper .link a {
 	display: table-cell;
@@ -2019,7 +2019,7 @@ a.has-submenu {
     content: '\e92a';
 }
 .nav-bg .fotorama__arr--prev,
-.nav-bg .fotorama__arr--next {    
+.nav-bg .fotorama__arr--next {
     border-radius: 4px;
     font-size: 30px;
 }
@@ -2597,22 +2597,25 @@ ul,
 ol {
     padding-left: 15px;
 }
+
 .unordered-list {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
 }
+
 .unordered-list > li:before {
     font-size: 16px;
     display: inline-block;
     margin-right: 7px;
-    content: "\2022";
+    /* content: "\2022"; */
+    list-style-type: none;
 }
-.unordered-list-circle {
+/* .unordered-list-circle {
     list-style-type: circle;
 }
 .unordered-list-disc {
     list-style-type: disc;
-}
+} */
 .ordered-list-roman {
     list-style-type: upper-roman;
 }
@@ -2745,8 +2748,8 @@ ol {
 }
 .text-gradient {
 	background: #3c9dda;
-	background: -webkit-linear-gradient(to bottom, #a65ccd, #3c9dda);  
-	background: linear-gradient(to bottom, #a65ccd, #3c9dda); 
+	background: -webkit-linear-gradient(to bottom, #a65ccd, #3c9dda);
+	background: linear-gradient(to bottom, #a65ccd, #3c9dda);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	padding-left: 1px;
@@ -6311,17 +6314,17 @@ figure.overlay img {
 /*-----------------------------------------------------------------------------------*/
 /*	33. BOX LAYOUT
 /*-----------------------------------------------------------------------------------*/
-@media (min-width: 1270px) { 
+@media (min-width: 1270px) {
 	.box-layout {
 	    padding: 50px 0;
 	    position: relative;
-	    background: transparent repeat;	    
+	    background: transparent repeat;
 	}
 	.box-layout.bg1 {
-	    background-image: url(style/images/art/pattern3.jpg);	    
+	    background-image: url(style/images/art/pattern3.jpg);
 	}
 	.box-layout.bg2 {
-	    background-image: url(style/images/art/pattern4.jpg);	    
+	    background-image: url(style/images/art/pattern4.jpg);
 	}
 	.box-layout .content-wrapper {
 	    background: #f6f7f8;
@@ -6372,7 +6375,7 @@ figure.overlay img {
     }
     .var-slick img {
         height: 450px !important;
-    }		    
+    }
 	.var-slick.vh100 img {
 		height: calc(100vh - 181px) !important;
 	}
@@ -6615,7 +6618,7 @@ figure.overlay img {
     }
     .navbar .navbar-nav > li > a.highlighted {
 	    color: #4c98c9
-	}   
+	}
 	.navbar.alt-hover:not(.fixed) .navbar-nav > li > a:focus,
 	.navbar.alt-hover:not(.fixed) .nav > li > a:hover,
 	.navbar.alt-hover:not(.fixed) .nav > li.active > a,
@@ -6681,7 +6684,7 @@ figure.overlay img {
         vertical-align: middle;
     }
     .navbar .navbar-header .navbar-other {
-        display: table-cell;        
+        display: table-cell;
         display: none;
         vertical-align: middle;
         width: 97px;
@@ -6826,7 +6829,7 @@ figure.overlay img {
     }
 	.var-slick img {
 		height: 400px !important;
-	}		    
+	}
 	.var-slick.vh100 img {
 		height: calc(100vh - 181px) !important;
 	}
@@ -7110,7 +7113,7 @@ figure.overlay img {
 	}
 	.var-slick img {
 		height: 250px !important;
-	}		    
+	}
 	.var-slick.vh100 img {
 		height: calc(100vh - 181px) !important;
 	}
@@ -7137,7 +7140,7 @@ figure.overlay img {
 	}
 	.split-layout .site-name {
 		bottom: 100px;
-	}	
+	}
 	main {
 	    width: 100%;
 	    height: calc(100vh - 445px);

@@ -85,7 +85,7 @@ function isLocationOpened(sechedule) {
 
     var dayAsString = weekday[n];
 
-    return sechedule[dayAsString] !== "- - -";
+    return sechedule[dayAsString] !== "- - -" && sechedule[dayAsString] !== "inchis" && sechedule[dayAsString] !== "closed";
 
 
 }
@@ -106,7 +106,6 @@ function renderDistances(sortedDestinationsList) {
     for (var i = 0; i < sortedDestinationsList.length; i++) {
 
         var isOpened = isLocationOpened(sortedDestinationsList[i].schedule);
-        debugger;
 
         var closedMessage = !isOpened? '<p class="text-danger">Magazinul este inchis</p>' : '<p class="text-success">Magazinul este deschis</p>';
 
@@ -123,6 +122,11 @@ function renderDistances(sortedDestinationsList) {
                closedMessage +
             '     </p>' +
             '     <h7>Contact</h7>' +
+            '     <ul class="unordered-list mb-0">' +
+            '       <li> <i class="fas fa-phone"> </i> <a href="tel:">' + ' ' + sortedDestinationsList[i].contact.phone + '</a></li>' +
+            '        <li> <i class="fas fa-envelope"> </i> <a href="mailto:' + sortedDestinationsList[i].contact.email + '">' + ' ' +   sortedDestinationsList[i].contact.email + '</a></li>' +
+            '     </ul> </br>' +
+            '     <h7><i class="fas fa-clock"></i>' + ' ' + 'Orar de funcționare</h7>' +
             '     <ul class="unordered-list blue mb-0">' +
             '       <li>Telefon: ' + sortedDestinationsList[i].contact.phone + '</li>' +
             '        <li>Email: <a class="emailContent" href="mailto:' + sortedDestinationsList[i].contact.email + '">' + sortedDestinationsList[i].contact.email + '</a></li>' +
@@ -130,12 +134,12 @@ function renderDistances(sortedDestinationsList) {
             '     <h6>Orar de functionare</h6>' +
             '     <ul class="unordered-list blue mb-0">' +
             '       <li>Luni: ' + sortedDestinationsList[i].schedule.monday + '</li>' +
-            '       <li>Marti: ' + sortedDestinationsList[i].schedule.tuesday + '</li>' +
+            '       <li>Marți: ' + sortedDestinationsList[i].schedule.tuesday + '</li>' +
             '       <li>Miercuri: ' + sortedDestinationsList[i].schedule.wednesday + '</li>' +
             '       <li>Joi: ' + sortedDestinationsList[i].schedule.thursday + '</li>' +
             '       <li>Vineri: ' + sortedDestinationsList[i].schedule.friday + '</li>' +
-            '       <li>Sambata: ' + sortedDestinationsList[i].schedule.saturday + '</li>' +
-            '       <li>Duminica: ' + sortedDestinationsList[i].schedule.sunday + '</li>' +
+            '       <li>Sâmbătă: ' + sortedDestinationsList[i].schedule.saturday + '</li>' +
+            '       <li>Duminică: ' + sortedDestinationsList[i].schedule.sunday + '</li>' +
             '     </ul>' +
             '   </div>' +
             '</div>';
