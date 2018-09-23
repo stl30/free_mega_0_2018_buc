@@ -74,14 +74,12 @@ $(function () {
         $('#variantList').html('');
 
         for (var i = 0; i < data.length; i++) {
-            // $('#variantList').append('<li data-index="' + i + '">' + data[i].name + '</li>');
             $('#variantList').append('<option value="' + i + '">' + data[i].name + '</option>');
         }
 
+        $("#variantList").off('change');
         $("#variantList").on('change', function () {
-            // console.log($(this).val())
-            var selectedIndex = $(this).val();
-            // console.log(selectedIndex)
+            var selectedIndex = parseInt($(this).val());
             displayDetails(data[selectedIndex]);
         });
 
