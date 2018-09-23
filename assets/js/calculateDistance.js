@@ -128,11 +128,6 @@ function renderDistances(sortedDestinationsList) {
             '     </ul> </br>' +
             '     <h7><i class="fas fa-clock"></i>' + ' ' + 'Orar de funcționare</h7>' +
             '     <ul class="unordered-list blue mb-0">' +
-            '       <li>Telefon: ' + sortedDestinationsList[i].contact.phone + '</li>' +
-            '        <li>Email: <a class="emailContent" href="mailto:' + sortedDestinationsList[i].contact.email + '">' + sortedDestinationsList[i].contact.email + '</a></li>' +
-            '     </ul>' +
-            '     <h6>Orar de functionare</h6>' +
-            '     <ul class="unordered-list blue mb-0">' +
             '       <li>Luni: ' + sortedDestinationsList[i].schedule.monday + '</li>' +
             '       <li>Marți: ' + sortedDestinationsList[i].schedule.tuesday + '</li>' +
             '       <li>Miercuri: ' + sortedDestinationsList[i].schedule.wednesday + '</li>' +
