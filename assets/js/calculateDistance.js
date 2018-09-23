@@ -98,17 +98,17 @@ function renderDistances(sortedDestinationsList) {
         '                                <!-- timeline-icon -->\n' +
         '\n' +
         '                                <div class="timeline-content box box-bg bg-white box-arrow left" style="">\n' +
-        '                                    <h5>Durata pana la locatii (minute) </h5>\n' +
+        '                                    <h5>În câte minute ajung la magazinul meu preferat?</h5>\n' +
         '                                </div>\n' +
         '                                <!-- timeline-content -->\n' +
         '                            </div>'
     ];
-    
+
     for (var i = 0; i < sortedDestinationsList.length; i++) {
 
         var isOpened = isLocationOpened(sortedDestinationsList[i].schedule);
 
-        var closedMessage = !isOpened? '<p class="text-danger">Magazinul este inchis</p>' : '<p class="text-success">Magazinul este deschis</p>';
+        var closedMessage = !isOpened? '<p class="text-danger">Magazinul este închis</p>' : '<p class="text-success">Magazinul este deschis</p>';
 
         var divContent2 = '<div class="timeline-block "> ' +
             '   <div class="timeline-icon">' +
@@ -118,20 +118,15 @@ function renderDistances(sortedDestinationsList) {
             '   </div>' +
             '   <div class="timeline-content box box-bg bg-white box-arrow left">' +
             '     <h6>' + sortedDestinationsList[i].locationName + '</h6>' +
-            '     <p>' + sortedDestinationsList[i].address +
-               closedMessage +
+                  closedMessage +
+            '     </br>' +
+            '     <p><i class="fas fa-map-marked-alt"></i>' + ' ' + sortedDestinationsList[i].address +
             '     </p>' +
-            '     <h7>Contact</h7>' +
             '     <ul class="unordered-list mb-0">' +
             '       <li> <i class="fas fa-phone"> </i> <a href="tel:">' + ' ' + sortedDestinationsList[i].contact.phone + '</a></li>' +
             '        <li> <i class="fas fa-envelope"> </i> <a href="mailto:' + sortedDestinationsList[i].contact.email + '">' + ' ' +   sortedDestinationsList[i].contact.email + '</a></li>' +
             '     </ul> </br>' +
             '     <h7><i class="fas fa-clock"></i>' + ' ' + 'Orar de funcționare</h7>' +
-            '     <ul class="unordered-list blue mb-0">' +
-            '       <li>Telefon: ' + sortedDestinationsList[i].contact.phone + '</li>' +
-            '        <li>Email: <a class="emailContent" href="mailto:' + sortedDestinationsList[i].contact.email + '">' + sortedDestinationsList[i].contact.email + '</a></li>' +
-            '     </ul>' +
-            '     <h6>Orar de functionare</h6>' +
             '     <ul class="unordered-list blue mb-0">' +
             '       <li>Luni: ' + sortedDestinationsList[i].schedule.monday + '</li>' +
             '       <li>Marți: ' + sortedDestinationsList[i].schedule.tuesday + '</li>' +
