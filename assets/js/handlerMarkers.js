@@ -102,7 +102,6 @@ function clearMarkers() {
 
 
 function calculateAndDisplayRoute(directionsService, directionsDisplay, sartLat, startLng, entLat, endLng) {
-    debugger;
     directionsService.route({
         origin: {lat: parseFloat(sartLat), lng: parseFloat(startLng)},  // Haight.
         destination: {lat: parseFloat(entLat), lng: parseFloat(endLng)},  // Ocean Beach.

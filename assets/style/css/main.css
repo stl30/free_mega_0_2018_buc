@@ -19,12 +19,13 @@
 }
 
 /* Optional: Makes the sample page fill the window. */
-/* html, body, #map-container, #map {
+ html, body, #map-container, #map {
     height: 100%;
     margin: 0;
     padding: 0;
 }
 
+/*
 #mapDetails{
     height: 50%;
 }

@@ -54,7 +54,7 @@ $(function () {
         $.get('http://192.168.100.77:8000/get-product-details/' + encodeURI(productName), loadProductDetailsCallback);
     }
 
-    function displayDetails(productVariant){
+    function displayDetails(productVariant) {
         $('#productVariant').html(productVariant.name);
         $('#productDescription').html(productVariant.caracteristics);
         $('#productScreenSize').html(productVariant.screen_size);
@@ -64,7 +64,7 @@ $(function () {
     }
 
     function loadProductDetailsCallback(data) {
-        console.log('stores for phone',  data[0].stores);
+        console.log('stores for phone', data[0].stores);
         window.storeData = null;
         window.storeData = data[0].stores;
 
@@ -78,7 +78,7 @@ $(function () {
             $('#variantList').append('<option value="' + i + '">' + data[i].name + '</option>');
         }
 
-        $("#variantList").on('change',function () {
+        $("#variantList").on('change', function () {
             // console.log($(this).val())
             var selectedIndex = $(this).val();
             // console.log(selectedIndex)
@@ -87,5 +87,13 @@ $(function () {
 
         $('#productDetails').show();
     }
+
+    $('a[href*="#"]').on('click', function (e) {
+        e.preventDefault();
+
+        $('html, body').animate({
+            scrollTop: $($(this).attr('href')).offset().top
+        }, 500, 'linear');
+    });
 
 });
