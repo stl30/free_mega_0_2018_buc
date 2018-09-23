@@ -43,7 +43,7 @@ $(function () {
             onItemAdd: function (value, $item) {
                 var productName = $item.html();
                 console.log("Redirect to: " + productName);
-                showProduct(productName);
+                showProduct(productName);               
             }
         });
     }
@@ -86,6 +86,8 @@ $(function () {
         });
 
         $('#productDetails').show();
+
+        $("html, body").animate({ scrollTop: $('#productDetails').offset().top }, 700);
     }
 
     $('a[href*="#"]').on('click', function (e) {
