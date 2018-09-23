@@ -70,6 +70,7 @@ function getCoordsToDisplay(sortedDestinationsListArg) {
 }
 
 function renderDistances(sortedDestinationsList) {
+    debugger;
 
     var ul = [
         '<div class="timeline-block" data-aos="fade-down">\n' +
@@ -117,7 +118,7 @@ function renderDistances(sortedDestinationsList) {
 
     }
 
-    var HTML_ul = ul.join();
+    var HTML_ul = ul.join(' ');
 
     $("#showDistances").html(HTML_ul);
 }
