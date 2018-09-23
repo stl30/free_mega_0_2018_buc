@@ -69,20 +69,46 @@ function getCoordsToDisplay(sortedDestinationsListArg) {
     return coordsToDsipaly;
 }
 
+function isLocationOpened(sechedule) {
+
+    var d = new Date();
+    var n = d.getDay();
+
+    var weekday = new Array(7);
+    weekday[1] = "monday";
+    weekday[2] = "tuesday";
+    weekday[3] = "wednesday";
+    weekday[4] = "thursday";
+    weekday[5] = "friday";
+    weekday[6] = "saturday";
+    weekday[0] = "sunday";
+
+    var dayAsString = weekday[n];
+
+    return sechedule[dayAsString] !== "- - -" && sechedule[dayAsString] !== "inchis" && sechedule[dayAsString] !== "closed";
+
+
+}
+
 function renderDistances(sortedDestinationsList) {
 
     var ul = [
         '<div class="timeline-block" data-aos="fade-down">\n' +
-        '                                <div class="timeline-icon"> <span class="icon icon-bg icon-s mb-20"><i class="et-location-pin"></i></span> </div>\n' +
+        '                                <div class="timeline-icon"> <span class="icon icon-bg icon-s mb-20"><i class="fas fa-car"></i></i></span> </div>\n' +
         '                                <!-- timeline-icon -->\n' +
         '\n' +
         '                                <div class="timeline-content box box-bg bg-white box-arrow left" style="">\n' +
-        '                                    <h5>În cât timp ajung la magazinul meu preferat?</h5>\n' +
+        '                                    <h5>Durata pana la locatii (minute) </h5>\n' +
         '                                </div>\n' +
         '                                <!-- timeline-content -->\n' +
         '                            </div>'
     ];
     for (var i = 0; i < sortedDestinationsList.length; i++) {
+
+        var isOpened = isLocationOpened(sortedDestinationsList[i].schedule);
+
+        var closedMessage = !isOpened? '<p class="text-danger">Magazinul este inchis</p>' : '<p class="text-success">Magazinul este deschis</p>';
+
 
         var divContent2 = '<div class="timeline-block "> ' +
             '   <div class="timeline-icon">' +
@@ -92,13 +118,20 @@ function renderDistances(sortedDestinationsList) {
             '   </div>' +
             '   <div class="timeline-content box box-bg bg-white box-arrow left">' +
             '     <h6>' + sortedDestinationsList[i].locationName + '</h6>' +
-            '     <p class="mb-20">' + sortedDestinationsList[i].address + '</p>' +
+            '     <p>' + sortedDestinationsList[i].address +
+               closedMessage +
+            '     </p>' +
             '     <h7>Contact</h7>' +
             '     <ul class="unordered-list mb-0">' +
             '       <li> <i class="fas fa-phone"> </i> <a href="tel:">' + ' ' + sortedDestinationsList[i].contact.phone + '</a></li>' +
             '        <li> <i class="fas fa-envelope"> </i> <a href="mailto:' + sortedDestinationsList[i].contact.email + '">' + ' ' +   sortedDestinationsList[i].contact.email + '</a></li>' +
             '     </ul> </br>' +
             '     <h7><i class="fas fa-clock"></i>' + ' ' + 'Orar de funcționare</h7>' +
+            '     <ul class="unordered-list blue mb-0">' +
+            '       <li>Telefon: ' + sortedDestinationsList[i].contact.phone + '</li>' +
+            '        <li>Email: <a class="emailContent" href="mailto:' + sortedDestinationsList[i].contact.email + '">' + sortedDestinationsList[i].contact.email + '</a></li>' +
+            '     </ul>' +
+            '     <h6>Orar de functionare</h6>' +
             '     <ul class="unordered-list blue mb-0">' +
             '       <li>Luni: ' + sortedDestinationsList[i].schedule.monday + '</li>' +
             '       <li>Marți: ' + sortedDestinationsList[i].schedule.tuesday + '</li>' +
@@ -117,12 +150,12 @@ function renderDistances(sortedDestinationsList) {
 
     }
 
-    var HTML_ul = ul.join();
+    var HTML_ul = ul.join(' ');
 
     $("#showDistances").html(HTML_ul);
 }
 
 
 function getTimeInMinutes(durationInSeconds){
-    return Math.round(durationInSeconds/60) + " minute";
+    return Math.round(durationInSeconds/60);
 }

@@ -13,8 +13,11 @@ $(function () {
 
     function loadProductListCallback(data) {
         productList = data;
+        var imageList = ['assets/images/htcu11.png', 'assets/images/iphone.png', 'assets/images/samsung.png',
+            'assets/images/huawei.png', 'assets/images/lg.png'];
         data.forEach(function (element) {
-            element.imgSource = 'assets/images/htcu11.png';
+            var randomIndex = Math.floor(Math.random() * imageList.length);
+            element.imgSource = imageList[randomIndex] ;
         });
         initAutocomplete();
     }
@@ -55,6 +58,8 @@ $(function () {
     }
 
     function displayDetails(productVariant) {
+        trackProductAcess(productVariant.id);
+
         $('#productVariant').html(productVariant.name);
         $('#productDescription').html(productVariant.caracteristics);
         $('#productScreenSize').html(productVariant.screen_size);
@@ -86,6 +91,10 @@ $(function () {
         $('#productDetails').show();
 
         $("html, body").animate({ scrollTop: $('#productDetails').offset().top }, 700);
+    }
+
+    function trackProductAcess(productId){
+        $.get('http://192.168.100.77:8000/reports/view-product-tracking/' + productId);
     }
 
     $('a[href*="#"]').on('click', function (e) {
