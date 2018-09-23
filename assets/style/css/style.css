@@ -7240,8 +7240,3 @@ figure.overlay img {
     padding: 35px 0;
     margin-right: 15px;
 }
-.selectize-input.items.has-options.full.has-items {
-    height: 56px;
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    /*padding: 17px;*/
-}
