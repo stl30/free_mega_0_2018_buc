@@ -37,6 +37,12 @@
     cursor: pointer;
 }
 
-div.selectize-dropdown.single.demo-default.m-w-25 > div > div.option.selected   span{
-    font-size: 18px!important;
-}
+/*.selectize-dropdown,*/
+/*.selectize-input,*/
+/*.selectize-input input {*/
+    /*color: #333333;*/
+    /*font-family: inherit;*/
+    /*font-size: 16px;*/
+    /*line-height: 20px;*/
+    /*-webkit-font-smoothing: inherit;*/
+/*}*/

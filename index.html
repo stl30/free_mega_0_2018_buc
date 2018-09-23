@@ -39,35 +39,21 @@
                          data-x="center"
                          data-y="middle"
                          data-voffset="['-35','-35','-55','-50']"
-                         data-fontsize="['50','50','50','36']"
-                         data-lineheight="['60','60','60','46']"
+
+
                          data-width="['1100','980','600','450']"
-                         data-textAlign="['center','center','center','center']"
-                         data-whitespace="['normal','normal','normal','normal']"
+
                          data-frames='[{"from":"x:-50px;opacity:0;","speed":1000,"to":"o:1;","delay":1000,"ease":"Power2.easeOut"},{"delay":"wait","speed":1500,"to":"opacity:0;","ease":"Power4.easeIn"}]'
                          data-responsive="on"
                          data-responsive_offset="on"
                          style="z-index: 9;">
                         <!-- <label class="custom-select"> -->
-                            
+
                             <input type="text" id="input-tags" class="demo-default m-w-25" placeholder="Search here...">
 
 
                         <!-- </label> -->
                     </div>
-                    <div class="tp-caption w-light color-white text-center"
-                         data-x="center"
-                         data-y="middle"
-                         data-voffset="['35','35','55','50']"
-                         data-fontsize="['28','28','28','22']"
-                         data-lineheight="['38','38','38','32']"
-                         data-width="['1100','980','600','400']"
-                         data-textAlign="['center','center','center','center']"
-                         data-whitespace="['normal','normal','normal','normal']"
-                         data-frames='[{"from":"x:50px;opacity:0;","speed":1000,"to":"o:1;","delay":1500,"ease":"Power2.easeOut"},{"delay":"wait","speed":1500,"to":"opacity:0;","ease":"Power4.easeIn"}]'
-                         data-responsive="on"
-                         data-responsive_offset="on"
-                         style="z-index: 9;">Find your dream phone</div>
                 </li>
             </ul>
             <div class="tp-bannertimer tp-bottom"></div>
@@ -75,7 +61,7 @@
         <!-- /.rev_slider -->
     </div>
     <!-- /.rev_slider_wrapper -->
-    <div class="wrapper light-wrapper">
+    <div class="wrapper light-wrapper" id="productDetails">
         <div class="container inner">
             <div class="row">
                 <div class="col-md-6">
@@ -86,10 +72,11 @@
                 <!-- /column -->
                 <div class="space30 hidden-xs hidden-md hidden-lg"></div>
                 <aside class="col-md-6 col-sm-12 sidebar">
-                    <h1 class="post-title">Nume produs</h1>
+                    <h1 class="post-title" id="productTitle">Nume produs</h1>
                     <div class="meta price price-l"><span class="amount">2000</span></div>
                     <!-- /.meta -->
-                    <p><strong>caracteristics</strong>Maecenas sed diam eget risus varius blandit sit amet non magna. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec ullamcorper nulla
+                    <p id="productDescription"><strong>caracteristics</strong>Maecenas sed diam eget risus varius blandit sit amet non magna. Cras justo odio, dapibus ac facilisis in, egestas eget
+                        quam. Donec ullamcorper nulla
                         non.</p>
                     <ul class="item-details product">
                         <li><span class="ratings four"></span> <a href="#" class="hover">(3 Customer Reviews)</a></li>
@@ -97,14 +84,15 @@
                              Nume producator
                         </li>
                         <li> <strong class="color-dark">Screen size:</strong>
-                            screen_size
+                            screen_size<span id="productScreenSize"></span>
                         </li>
                         <li> <strong class="color-dark">Camera:</strong>
-                            camera
+                            camera<span id="productCamera"></span>
                         </li>
                         <li> <strong class="color-dark">Memory:</strong>
-                            memory
+                            memory<span id="productMemory"></span>
                         </li>
+                        <div id="variantList"></div>
                         <li> <strong class="color-dark">Varianta:</strong>
                             <label class="custom-select category-select">
                                 <select class="mb-0">
@@ -115,7 +103,7 @@
                                 <span><!-- fake select handler --></span> </label>
                         </li>
                     </ul>
-                    <a href="#" class="btn btn-rounded btn-icon-left"><i class="et-location"></i>Vezi disponibilitate magazine</a> </aside>
+                    <a href="#" class="btn btn-rounded btn-icon-left" id="showMap"><i class="et-location"></i>Vezi disponibilitate magazine</a> </aside>
                 <!-- /.sidebar -->
             </div>
             <!-- /.row -->

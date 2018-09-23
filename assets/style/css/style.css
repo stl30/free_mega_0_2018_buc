@@ -114,7 +114,7 @@ body {
     font-weight: normal;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    -webkit-text-size-adjust: 100%;
+    /*-webkit-text-size-adjust: 100%;*/
     color: #707070;
     font-family: 'Rubik', sans-serif;
     background: #f6f7f8;
@@ -7239,4 +7239,9 @@ figure.overlay img {
     position: relative;
     padding: 35px 0;
     margin-right: 15px;
+}
+.selectize-input.items.has-options.full.has-items {
+    height: 56px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    /*padding: 17px;*/
 }
