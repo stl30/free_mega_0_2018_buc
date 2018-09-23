@@ -106,9 +106,9 @@ function renderDistances(sortedDestinationsList) {
 
     for (var i = 0; i < sortedDestinationsList.length; i++) {
 
-        var isOpened = isLocationOpened(sortedDestinationsList[i].schedule);
+        var isOpened = sortedDestinationsList[i].shopStatus == "opened";
 
-        var closedMessage = !isOpened? '<p class="text-danger">Magazinul este închis</p>' : '<p class="text-success">Magazinul este deschis</p>';
+        var closedMessage = !isOpened? '<div><span class="label label-danger">'+ sortedDestinationsList[i].message +'</span></div>' : '<div><span class="label label-success">'+ sortedDestinationsList[i].message +'</span></div>';
 
         var divContent2 = '<div class="timeline-block "> ' +
             '   <div class="timeline-icon">' +

@@ -68,10 +68,88 @@ $(function () {
         $('#productManufacturer').html(productVariant.producator);
     }
 
+    function updateStores(data){
+        $.each(data, function(i, store){
+            var days = ['sunday','monday','tuesday','wednesday','thursday','friday','saturday'];
+            var dayOfMonth = days[moment().day()];
+            
+            data[i]['open'] = store[dayOfMonth].split(' - ')[0];
+            data[i]['close'] = store[dayOfMonth].split(' - ')[1];
+        })
+        return data;
+    }
+    function refreshClosingDay(data){
+        var now = moment();
+        $.each(data, function(i, store){
+            var regex = /^[0-9]{1,2}:[0-9]{2}$/;
+            var message = 'inchis astazi'
+            var shopStatus = 'closed';
+
+            var found = store.open.match(regex)
+            if(found){
+                var storeOpenHours = store.open.split(':');
+                var storeCloseHours = store.close.split(':');
+                var now = moment();
+                // now.hour(3);
+                var open = moment();
+                open.hour(storeOpenHours[0]);
+                open.minute(storeOpenHours[1]);
+                open.second(0);
+                
+                var close = moment();
+                close.hour(storeCloseHours[0]);
+                close.minute(storeCloseHours[1]);
+                close.second(0);
+                if(now < open){
+                    message = 'deschide in ';
+                    
+                    var diff = open.diff(now);
+                    
+                    var h = parseInt(open.diff(now, 'hours'));
+                    var m = parseInt(open.diff(now, 'minutes') % 60);
+                    if(h > 0)
+                        message += h + ' ore si ';
+                        
+                    if(m == 1)
+                        message += ' 1 minut';
+                    else
+                        message += m + ' minute';
+                } else if(now > open && now < close){
+                    shopStatus = 'opened';
+                    var message = 'inchide in ';
+                    
+                    var h = parseInt(close.diff(now, 'hours'));
+                    var m = parseInt(close.diff(now, 'minutes') % 60);
+                    if(h > 0)
+                        message += h + ' ore si '
+                        
+                    if(m == 1)
+                        message += ' 1 minut';
+                    else
+                        message += m + ' minute';
+                } else {
+                    var message = 'inchis astazi';
+                }
+            } else {
+                // inchis astazi
+                var shopStatus = 'closed';
+            }
+            data[i]['message'] = message
+            data[i]['shopStatus'] = shopStatus
+        })
+        return data;
+    }
+
     function loadProductDetailsCallback(data) {
         console.log('stores for phone', data[0].stores);
-        window.storeData = null;
+        window.storeData = null
+
         window.storeData = data[0].stores;
+        window.storeData = updateStores(window.storeData);
+        window.storeData = refreshClosingDay(window.storeData);
+        
+        console.log(window.storeData);
+        
 
         displayDetails(data[0]);
 
