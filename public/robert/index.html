@@ -11,11 +11,80 @@
 
                     var dayOfMonth = days[moment().day()];
                     
-                    data[i].stores[j]['open'] = store[dayOfMonth].split(' - ');
+                    data[i].stores[j]['open'] = store[dayOfMonth].split(' - ')[0];
+                    data[i].stores[j]['close'] = store[dayOfMonth].split(' - ')[1];
 
                     $('.stores').append(store['dealer_name'] + '<br />');
                 })
             })
+            return data;
+        }
+        function refreshClosingDay(data){
+            var now = moment();
+
+            $.each(data, function(i, product){
+                $.each(product.stores, function(j, store){
+                    var regex = /^[0-9]{1,2}:[0-9]{2}$/;
+                    
+                    var found = store.open.match(regex)
+
+                    if(found){
+                        var storeOpenHours = store.open.split(':');
+                        var storeCloseHours = store.close.split(':');
+
+                        var now = moment();
+                        now.hour(3);
+
+                        var open = moment();
+                        open.hour(storeOpenHours[0]);
+                        open.minute(storeOpenHours[1]);
+                        open.second(0);
+                        
+                        var close = moment();
+                        close.hour(storeCloseHours[0]);
+                        close.minute(storeCloseHours[1]);
+                        close.second(0);
+
+                        if(now < open){
+                            var shopStatus = 'close';
+                            var message = 'deschide in ';
+                            
+                            var diff = open.diff(now);
+                            
+                            var h = parseInt(open.diff(now, 'hours'));
+                            var m = parseInt(open.diff(now, 'minutes') % 60);
+                            if(h > 0)
+                                message += h + ' ore si '
+                                
+                            if(m == 1)
+                                message += ' 1 minut';
+                            else
+                                message += m + ' minute';
+                        } else if(now > open && now < close){
+                            var shopStatus = 'opened';
+                            var message = 'inchide in ';
+                            
+                            var h = parseInt(close.diff(now, 'hours'));
+                            var m = parseInt(close.diff(now, 'minutes') % 60);
+                            if(h > 0)
+                                message += h + ' ore si '
+                                
+                            if(m == 1)
+                                message += ' 1 minut';
+                            else
+                                message += m + ' minute';
+                        } else {
+                            var message = 'inchis astazi';
+                        }
+                        data[i].stores[j]['message'] = message
+                    } else {
+                        // inchis astazi
+                        var shopStatus = 'closed';
+                        data[i].stores[j]['message'] = 'inchis astazi'
+                    }
+                })
+            })
+
             return data;
         }
 
@@ -24,8 +93,8 @@
             data = res;
             data = updateDates(data);
 
-            console.log(data);
-            
+            refreshClosingDay(data);
+            console.log(data[0].stores);
         })
     })
 </script>

@@ -22,6 +22,13 @@ class ProductController extends Controller
                         ->orderBy('nume_produs')
                         ->get();
     }
+    public function variantsIndex()
+    {
+        //
+        return Product::select('id', 'nume_produs', 'name')
+                        ->orderBy('name')
+                        ->get();
+    }
 
     /**
      * Show the form for creating a new resource.
