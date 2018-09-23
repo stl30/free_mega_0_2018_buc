@@ -91,11 +91,22 @@ function renderDistances(sortedDestinationsList) {
             '     </span>' +
             '   </div>' +
             '   <div class="timeline-content box box-bg bg-white box-arrow left">' +
-            '     <h5>' + sortedDestinationsList[i].locationName + '</h5>' +
+            '     <h6>' + sortedDestinationsList[i].locationName + '</h6>' +
             '     <p class="mb-20">' + sortedDestinationsList[i].address + '</p>' +
+            '     <h7>Contact</h7>' +
             '     <ul class="unordered-list blue mb-0">' +
             '       <li>' + sortedDestinationsList[i].contact.phone + '</li>' +
             '        <li><a href="mailto:' + sortedDestinationsList[i].contact.email + '">' + sortedDestinationsList[i].contact.email + '</a></li>' +
+            '     </ul>' +
+            '     <h6>Orar de functionare</h6>' +
+            '     <ul class="unordered-list blue mb-0">' +
+            '       <li>Luni: ' + sortedDestinationsList[i].schedule.monday + '</li>' +
+            '       <li>Marti: ' + sortedDestinationsList[i].schedule.tuesday + '</li>' +
+            '       <li>Miercuri: ' + sortedDestinationsList[i].schedule.wednesday + '</li>' +
+            '       <li>Joi: ' + sortedDestinationsList[i].schedule.thursday + '</li>' +
+            '       <li>Vineri: ' + sortedDestinationsList[i].schedule.friday + '</li>' +
+            '       <li>Sambata: ' + sortedDestinationsList[i].schedule.saturday + '</li>' +
+            '       <li>Duminica: ' + sortedDestinationsList[i].schedule.sunday + '</li>' +
             '     </ul>' +
             '   </div>' +
             '</div>';
