@@ -60,7 +60,7 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
  * Show markers on map from current selection
  */
 function showSelectedMarkers() {
-    locations = initMaps();
+   // locations = initMaps();
 
     var count;
 
