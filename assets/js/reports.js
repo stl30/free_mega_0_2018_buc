@@ -24,6 +24,8 @@ function populateVariantsHistorySelect(){
         for(var i in jsonData){
             $prodSelect.append('<option value="' + jsonData[i].id + '">' + jsonData[i].name + '</option>');
         }
+
+        $prodSelect.selectize();
         
         $prodSelect.on('change',function(){
             generateHistoryChart($(this).val());
