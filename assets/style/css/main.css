@@ -37,12 +37,33 @@
     cursor: pointer;
 }
 
-/*.selectize-dropdown,*/
-/*.selectize-input,*/
-/*.selectize-input input {*/
-    /*color: #333333;*/
-    /*font-family: inherit;*/
-    /*font-size: 16px;*/
+/*.selectize-control {*/
+    /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
     /*line-height: 20px;*/
-    /*-webkit-font-smoothing: inherit;*/
+    /*height: 56px;*/
 /*}*/
+/*.selectize-input {*/
+    /*padding: 17px;*/
+    /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+    /*line-height: 20px;*/
+    /*height: 56px;*/
+/*}*/
+
+/*div.selectize-input.items.has-options.full.has-items > div.item {*/
+    /*!*padding: 10px;*!*/
+/*}*/
+
+/*.selectize-control.single .selectize-input, .selectize-control.single .selectize-input input {*/
+    /*bottom: 10px;*/
+
+ /*}*/
+
+.selectize-input {
+height: 56px;
+font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+/*padding: 17px;*/
+}
+
+.input-tags-selectized { position: relative!important;}
+
+
