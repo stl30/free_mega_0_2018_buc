@@ -106,7 +106,6 @@ function renderDistances(sortedDestinationsList) {
     for (var i = 0; i < sortedDestinationsList.length; i++) {
 
         var isOpened = isLocationOpened(sortedDestinationsList[i].schedule);
-        debugger;
 
         var closedMessage = !isOpened? '<p class="text-danger">Magazinul este inchis</p>' : '<p class="text-success">Magazinul este deschis</p>';
 
