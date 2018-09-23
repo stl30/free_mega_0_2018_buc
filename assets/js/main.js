@@ -13,8 +13,11 @@ $(function () {
 
     function loadProductListCallback(data) {
         productList = data;
+        var imageList = ['assets/images/htcu11.png', 'assets/images/iphone.png', 'assets/images/samsung.png',
+            'assets/images/huawei.png', 'assets/images/lg.png'];
         data.forEach(function (element) {
-            element.imgSource = 'assets/images/htcu11.png';
+            var randomIndex = Math.floor(Math.random() * imageList.length);
+            element.imgSource = imageList[randomIndex] ;
         });
         initAutocomplete();
     }
