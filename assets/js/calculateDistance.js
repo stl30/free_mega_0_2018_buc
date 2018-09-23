@@ -108,7 +108,7 @@ function renderDistances(sortedDestinationsList) {
         var isOpened = isLocationOpened(sortedDestinationsList[i].schedule);
         debugger;
 
-        var closedMessage = !isOpened? '<p class="text-error">Magazinul este inchis</p>' : '';
+        var closedMessage = !isOpened? '<p class="text-danger">Magazinul este inchis</p>' : '<p class="text-success">Magazinul este deschis</p>';
 
 
         var divContent2 = '<div class="timeline-block "> ' +
@@ -119,7 +119,7 @@ function renderDistances(sortedDestinationsList) {
             '   </div>' +
             '   <div class="timeline-content box box-bg bg-white box-arrow left">' +
             '     <h6>' + sortedDestinationsList[i].locationName + '</h6>' +
-            '     <p class="mb-20">' + sortedDestinationsList[i].address +
+            '     <p>' + sortedDestinationsList[i].address +
                closedMessage +
             '     </p>' +
             '     <h7>Contact</h7>' +
