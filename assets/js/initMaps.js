@@ -11,6 +11,8 @@ function initMaps(){
                 lat: parseFloat(window.storeData[i].latitude),
                 lng: parseFloat(window.storeData[i].longitude),
                 address: window.storeData[i].address,
+                shopStatus : window.storeData[i].shopStatus,
+                message : window.storeData[i].message,
                 schedule: {
                     monday: window.storeData[i].monday,
                     tuesday: window.storeData[i].tuesday,
