@@ -95,7 +95,7 @@ function renderDistances(sortedDestinationsList) {
             '     <p class="mb-20">' + sortedDestinationsList[i].address + '</p>' +
             '     <h7>Contact</h7>' +
             '     <ul class="unordered-list blue mb-0">' +
-            '       <li>' + sortedDestinationsList[i].contact.phone + '</li>' +
+            '       <li>Telefon: ' + sortedDestinationsList[i].contact.phone + '</li>' +
             '        <li><a href="mailto:' + sortedDestinationsList[i].contact.email + '">' + sortedDestinationsList[i].contact.email + '</a></li>' +
             '     </ul>' +
             '     <h6>Orar de functionare</h6>' +
