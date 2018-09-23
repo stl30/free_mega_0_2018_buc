@@ -30,7 +30,7 @@ function initMap(coordsToDisplay, origin1) {
             calculateAndDisplayRoute(directionsService, directionsDisplay, origin1.lat, origin1.lng, coordsToDisplay[0][1], coordsToDisplay[0][2]);
 
             infoWindow.setPosition(origin1);
-            infoWindow.setContent('<strong>You are here!<strong');
+            infoWindow.setContent('<strong>You are here!</strong>');
             infoWindow.open(map);
         }, function () {
             handleLocationError(true, infoWindow, map.getCenter());

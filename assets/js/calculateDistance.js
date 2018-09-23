@@ -77,7 +77,7 @@ function renderDistances(sortedDestinationsList) {
         '                                <!-- timeline-icon -->\n' +
         '\n' +
         '                                <div class="timeline-content box box-bg bg-white box-arrow left" style="">\n' +
-        '                                    <h5>Durata pana la locatii</h5>\n' +
+        '                                    <h5>În cât timp ajung la magazinul meu preferat?</h5>\n' +
         '                                </div>\n' +
         '                                <!-- timeline-content -->\n' +
         '                            </div>'
@@ -94,19 +94,19 @@ function renderDistances(sortedDestinationsList) {
             '     <h6>' + sortedDestinationsList[i].locationName + '</h6>' +
             '     <p class="mb-20">' + sortedDestinationsList[i].address + '</p>' +
             '     <h7>Contact</h7>' +
-            '     <ul class="unordered-list blue mb-0">' +
-            '       <li>' + sortedDestinationsList[i].contact.phone + '</li>' +
-            '        <li><a href="mailto:' + sortedDestinationsList[i].contact.email + '">' + sortedDestinationsList[i].contact.email + '</a></li>' +
-            '     </ul>' +
-            '     <h6>Orar de functionare</h6>' +
+            '     <ul class="unordered-list mb-0">' +
+            '       <li> <i class="fas fa-phone"> </i> <a href="tel:">' + ' ' + sortedDestinationsList[i].contact.phone + '</a></li>' +
+            '        <li> <i class="fas fa-envelope"> </i> <a href="mailto:' + sortedDestinationsList[i].contact.email + '">' + ' ' +   sortedDestinationsList[i].contact.email + '</a></li>' +
+            '     </ul> </br>' +
+            '     <h7><i class="fas fa-clock"></i>' + ' ' + 'Orar de funcționare</h7>' +
             '     <ul class="unordered-list blue mb-0">' +
             '       <li>Luni: ' + sortedDestinationsList[i].schedule.monday + '</li>' +
-            '       <li>Marti: ' + sortedDestinationsList[i].schedule.tuesday + '</li>' +
+            '       <li>Marți: ' + sortedDestinationsList[i].schedule.tuesday + '</li>' +
             '       <li>Miercuri: ' + sortedDestinationsList[i].schedule.wednesday + '</li>' +
             '       <li>Joi: ' + sortedDestinationsList[i].schedule.thursday + '</li>' +
             '       <li>Vineri: ' + sortedDestinationsList[i].schedule.friday + '</li>' +
-            '       <li>Sambata: ' + sortedDestinationsList[i].schedule.saturday + '</li>' +
-            '       <li>Duminica: ' + sortedDestinationsList[i].schedule.sunday + '</li>' +
+            '       <li>Sâmbătă: ' + sortedDestinationsList[i].schedule.saturday + '</li>' +
+            '       <li>Duminică: ' + sortedDestinationsList[i].schedule.sunday + '</li>' +
             '     </ul>' +
             '   </div>' +
             '</div>';
