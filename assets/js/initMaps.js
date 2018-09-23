@@ -43,6 +43,8 @@ function initMaps(){
         });
     }
 
+    
+    
 
     getTimeUntill(destinationsList,origin1);
 

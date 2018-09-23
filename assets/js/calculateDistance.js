@@ -64,6 +64,8 @@ function getCoordsToDisplay(sortedDestinationsListArg) {
         )
     }
 
+    $('#nrOfAvailableShops').html(coordsToDsipaly.length);
+
     return coordsToDsipaly;
 }
 
@@ -75,7 +77,7 @@ function renderDistances(sortedDestinationsList) {
         '                                <!-- timeline-icon -->\n' +
         '\n' +
         '                                <div class="timeline-content box box-bg bg-white box-arrow left" style="">\n' +
-        '                                    <h5>Distanta in kilometrii de la locatia dumneavostra</h5>\n' +
+        '                                    <h5>Durata pana la locatii</h5>\n' +
         '                                </div>\n' +
         '                                <!-- timeline-content -->\n' +
         '                            </div>'
@@ -84,8 +86,8 @@ function renderDistances(sortedDestinationsList) {
 
         var divContent2 = '<div class="timeline-block "> ' +
             '   <div class="timeline-icon">' +
-            '     <span class="icon icon-bg icon-xs" style="font-size: 16px;">' 
-             +   sortedDestinationsList[i].distanceDuration.duration.text +
+            '     <span class="icon icon-bg icon-xs" style="font-size: 16px;">'
+            + getTimeInMinutes(sortedDestinationsList[i].distanceDuration.duration.value) +
             '     </span>' +
             '   </div>' +
             '   <div class="timeline-content box box-bg bg-white box-arrow left">' +
@@ -93,7 +95,7 @@ function renderDistances(sortedDestinationsList) {
             '     <p class="mb-20">' + sortedDestinationsList[i].address + '</p>' +
             '     <ul class="unordered-list blue mb-0">' +
             '       <li>' + sortedDestinationsList[i].contact.phone + '</li>' +
-            '        <li><a href="mailto:' + sortedDestinationsList[i].contact.email + '">'+sortedDestinationsList[i].contact.email+'</a></li>' +
+            '        <li><a href="mailto:' + sortedDestinationsList[i].contact.email + '">' + sortedDestinationsList[i].contact.email + '</a></li>' +
             '     </ul>' +
             '   </div>' +
             '</div>';
@@ -104,7 +106,12 @@ function renderDistances(sortedDestinationsList) {
 
     }
 
-    var HTML_ul =  ul.join() ;
+    var HTML_ul = ul.join();
 
     $("#showDistances").html(HTML_ul);
+}
+
+
+function getTimeInMinutes(durationInSeconds){
+    return Math.round(durationInSeconds/60) + " minute";
 }
