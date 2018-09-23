@@ -59,124 +59,124 @@ $(document).ready(function() {
 	/*-----------------------------------------------------------------------------------*/
     /*	SLIDER REVOLUTION
     /*-----------------------------------------------------------------------------------*/
-    var revapi1 = jQuery('#slider').show().revolution(
-    {
-        sliderType: "standard",
-        sliderLayout: "fullscreen",
-        fullScreenOffsetContainer: ".navbar:not(.fixed)",
-        spinner: "spinner",
-        delay: 9000,
-        shadow: 0,
-        gridwidth:[1170, 1024, 778, 480],
-        responsiveLevels: [1240, 1024, 778, 480],
-        navigation: {
-            arrows: {
-                enable: true,
-                hide_onleave: true
-            },
-            touch: { 
-		        touchenabled: 'on',
-		        swipe_threshold: 75,
-		        swipe_min_touches: 1,
-		        swipe_direction: 'horizontal',
-		        drag_block_vertical: true		 
-		    },
-            bullets: {
-                enable: true,
-                hide_onleave: true,
-                hide_onmobile: true,
-                h_align: "center",
-                v_align: "bottom",
-                space: 8,
-                h_offset: 0,
-                v_offset: 20,
-                tmp: ''
-            }
-        }   
-    });
-    var api1 = revapi1.on('revolution.slide.onchange', function(e, data) { 
-		api1.removeClass('rs-nav-light rs-nav-dark').addClass( 
-			'rs-nav-' + api1.find('li').eq(data.slideIndex - 1).attr('data-nav-color') 
-		); 
-	});
-	var revapi2 = jQuery('#slider2').show().revolution(
-    {
-        sliderType: "standard",
-        sliderLayout: 'fullwidth',
-        spinner: "spinner",
-        delay: 9000,
-        shadow: 0,
-        gridwidth:[1170, 1024, 778, 480],
-		gridheight:[600, 525, 400, 400],
-        responsiveLevels: [1240, 1024, 778, 480],
-        navigation: {
-            arrows: {
-                enable: true,
-                hide_onleave: true
-            },
-            touch: { 
-		        touchenabled: 'on',
-		        swipe_threshold: 75,
-		        swipe_min_touches: 1,
-		        swipe_direction: 'horizontal',
-		        drag_block_vertical: true		 
-		    },
-            bullets: {
-                enable: true,
-                hide_onleave: true,
-                h_align: "center",
-                v_align: "bottom",
-                space: 8,
-                h_offset: 0,
-                v_offset: 20,
-                tmp: ''
-            }
-        }   
-    });
-    var api2 = revapi2.on('revolution.slide.onchange', function(e, data) { 
-		api2.removeClass('rs-nav-light rs-nav-dark').addClass( 
-			'rs-nav-' + api2.find('li').eq(data.slideIndex - 1).attr('data-nav-color') 
-		); 
-	});
-	var revapi3 = jQuery('#slider3').show().revolution(
-    {
-        sliderType: "standard",
-        sliderLayout: "auto",
-        spinner: "spinner",
-        delay: 9000,
-        shadow: 0,
-        gridwidth:[1170, 1024, 778, 480],
-		gridheight:[600, 525, 400, 400],
-        responsiveLevels: [1240, 1024, 778, 480],
-        navigation: {
-            arrows: {
-                enable: true,
-                hide_onleave: true
-            },
-            touch: { 
-		        touchenabled: 'on',
-		        swipe_threshold: 75,
-		        swipe_min_touches: 1,
-		        swipe_direction: 'horizontal',
-		        drag_block_vertical: true		 
-		    },
-            bullets: {
-                enable: true,
-                hide_onleave: true,
-                h_align: "center",
-                v_align: "bottom",
-                space: 8,
-                h_offset: 0,
-                v_offset: 20,
-                tmp: ''
-            }
-        }   
-    });
-    var api3 = revapi3.on('revolution.slide.onchange', function(e, data) { 
-		api3.removeClass('rs-nav-light rs-nav-dark').addClass( 
-			'rs-nav-' + api3.find('li').eq(data.slideIndex - 1).attr('data-nav-color') 
-		); 
-	});
+    // var revapi1 = jQuery('#slider').show().revolution(
+    // {
+    //     sliderType: "standard",
+    //     sliderLayout: "fullscreen",
+    //     fullScreenOffsetContainer: ".navbar:not(.fixed)",
+    //     spinner: "spinner",
+    //     delay: 9000,
+    //     shadow: 0,
+    //     gridwidth:[1170, 1024, 778, 480],
+    //     responsiveLevels: [1240, 1024, 778, 480],
+    //     navigation: {
+    //         arrows: {
+    //             enable: true,
+    //             hide_onleave: true
+    //         },
+    //         touch: { 
+	// 	        touchenabled: 'on',
+	// 	        swipe_threshold: 75,
+	// 	        swipe_min_touches: 1,
+	// 	        swipe_direction: 'horizontal',
+	// 	        drag_block_vertical: true		 
+	// 	    },
+    //         bullets: {
+    //             enable: true,
+    //             hide_onleave: true,
+    //             hide_onmobile: true,
+    //             h_align: "center",
+    //             v_align: "bottom",
+    //             space: 8,
+    //             h_offset: 0,
+    //             v_offset: 20,
+    //             tmp: ''
+    //         }
+    //     }   
+    // });
+    // var api1 = revapi1.on('revolution.slide.onchange', function(e, data) { 
+	// 	api1.removeClass('rs-nav-light rs-nav-dark').addClass( 
+	// 		'rs-nav-' + api1.find('li').eq(data.slideIndex - 1).attr('data-nav-color') 
+	// 	); 
+	// });
+	// var revapi2 = jQuery('#slider2').show().revolution(
+    // {
+    //     sliderType: "standard",
+    //     sliderLayout: 'fullwidth',
+    //     spinner: "spinner",
+    //     delay: 9000,
+    //     shadow: 0,
+    //     gridwidth:[1170, 1024, 778, 480],
+	// 	gridheight:[600, 525, 400, 400],
+    //     responsiveLevels: [1240, 1024, 778, 480],
+    //     navigation: {
+    //         arrows: {
+    //             enable: true,
+    //             hide_onleave: true
+    //         },
+    //         touch: { 
+	// 	        touchenabled: 'on',
+	// 	        swipe_threshold: 75,
+	// 	        swipe_min_touches: 1,
+	// 	        swipe_direction: 'horizontal',
+	// 	        drag_block_vertical: true		 
+	// 	    },
+    //         bullets: {
+    //             enable: true,
+    //             hide_onleave: true,
+    //             h_align: "center",
+    //             v_align: "bottom",
+    //             space: 8,
+    //             h_offset: 0,
+    //             v_offset: 20,
+    //             tmp: ''
+    //         }
+    //     }   
+    // });
+    // var api2 = revapi2.on('revolution.slide.onchange', function(e, data) { 
+	// 	api2.removeClass('rs-nav-light rs-nav-dark').addClass( 
+	// 		'rs-nav-' + api2.find('li').eq(data.slideIndex - 1).attr('data-nav-color') 
+	// 	); 
+	// });
+	// var revapi3 = jQuery('#slider3').show().revolution(
+    // {
+    //     sliderType: "standard",
+    //     sliderLayout: "auto",
+    //     spinner: "spinner",
+    //     delay: 9000,
+    //     shadow: 0,
+    //     gridwidth:[1170, 1024, 778, 480],
+	// 	gridheight:[600, 525, 400, 400],
+    //     responsiveLevels: [1240, 1024, 778, 480],
+    //     navigation: {
+    //         arrows: {
+    //             enable: true,
+    //             hide_onleave: true
+    //         },
+    //         touch: { 
+	// 	        touchenabled: 'on',
+	// 	        swipe_threshold: 75,
+	// 	        swipe_min_touches: 1,
+	// 	        swipe_direction: 'horizontal',
+	// 	        drag_block_vertical: true		 
+	// 	    },
+    //         bullets: {
+    //             enable: true,
+    //             hide_onleave: true,
+    //             h_align: "center",
+    //             v_align: "bottom",
+    //             space: 8,
+    //             h_offset: 0,
+    //             v_offset: 20,
+    //             tmp: ''
+    //         }
+    //     }   
+    // });
+    // var api3 = revapi3.on('revolution.slide.onchange', function(e, data) { 
+	// 	api3.removeClass('rs-nav-light rs-nav-dark').addClass( 
+	// 		'rs-nav-' + api3.find('li').eq(data.slideIndex - 1).attr('data-nav-color') 
+	// 	); 
+	// });
 	var revapi4 = jQuery('#slider4').show().revolution(
     {
         sliderType: "standard",
@@ -594,12 +594,12 @@ $(document).ready(function() {
 	/*-----------------------------------------------------------------------------------*/
 	/*	DRIBBBLE
 	/*-----------------------------------------------------------------------------------*/
-    jribbble.shots({token: "a78e71084428335514da5e9880089715c8890217e0a65cd44e2e3512d18363d7", per_page: 6}, function(shots) {
-	  document.querySelector(".dribbble-feed").innerHTML = shots.reduce(function(html, shot) {
-	    return html + '<div class="item col-xs-6 col-sm-4 col-md-2"><figure class="overlay overlay1"><a href="' + shot.html_url + '" target="_blank"></a><img src="' + shot.images.normal + '"><figcaption><i class="et-link from-top icon-xs"></i></figcaption></figure></div>';
-	  }, "");
-	  $('.dribbble-feed figure.overlay').prepend('<span class="bg"></span>');
-	});
+    // jribbble.shots({token: "a78e71084428335514da5e9880089715c8890217e0a65cd44e2e3512d18363d7", per_page: 6}, function(shots) {
+	//   document.querySelector(".dribbble-feed").innerHTML = shots.reduce(function(html, shot) {
+	//     return html + '<div class="item col-xs-6 col-sm-4 col-md-2"><figure class="overlay overlay1"><a href="' + shot.html_url + '" target="_blank"></a><img src="' + shot.images.normal + '"><figcaption><i class="et-link from-top icon-xs"></i></figcaption></figure></div>';
+	//   }, "");
+	//   $('.dribbble-feed figure.overlay').prepend('<span class="bg"></span>');
+	// });
     /*-----------------------------------------------------------------------------------*/
     /*	LIGHTGALLERY
     /*-----------------------------------------------------------------------------------*/

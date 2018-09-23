@@ -9,7 +9,7 @@
     <title>FoundIt</title>
     <link rel="stylesheet" type="text/css" href="assets/style/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/style/css/plugins.css">
-    <link rel="stylesheet" type="text/css" href="assets/style/revolution/css/settings.css">
+    <!-- <link rel="stylesheet" type="text/css" href="assets/style/revolution/css/settings.css"> -->
     <link rel="stylesheet" type="text/css" href="assets/style/revolution/css/layers.css">
     <link rel="stylesheet" type="text/css" href="assets/style/revolution/css/navigation.css">
     <link rel="stylesheet" type="text/css" href="assets/style/type/icons.css">
@@ -17,10 +17,15 @@
     <link rel="stylesheet" type="text/css" href="assets/style/css/color/blue.css">
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
 
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+
+    <link rel="stylesheet" href="assets/selectize/css/selectize.css">
+    <link rel="stylesheet" href="assets/selectize/css/selectize.bootstrap3.css">
+    <link rel="stylesheet" href="assets/style/css/main.css">
+
+
+
+
+
 </head>
 <body>
 <div class="content-wrapper">
@@ -29,7 +34,7 @@
     <div class="rev_slider_wrapper fullwidth-container">
         <div id="slider4" class="rev_slider" data-version="5.4.1">
             <ul>
-                <li data-transition="fade" data-fstransition="fade" style=""><img src="assets/style/images/home.jpg" alt="" />
+                <li data-transition="fade" data-fstransition="fade"><img src="assets/style/images/home.jpg" alt="" />
                     <div class="tp-caption w-regular color-white text-center"
                          data-x="center"
                          data-y="middle"
@@ -43,14 +48,12 @@
                          data-responsive="on"
                          data-responsive_offset="on"
                          style="z-index: 9;">
-                        <label class="custom-select">
-                            <select name="department" required="" class="m-w-25">
-                                <option value="">Model telefon</option>
-                                <option value="IPHONE">IPHONE</option>
-                                <option value="SAMSUNG">SAMSUNG</option>
-                            </select>
+                        <!-- <label class="custom-select"> -->
+                            
+                            <input type="text" id="input-tags" class="demo-default m-w-25" placeholder="Search here...">
 
-                        </label>
+
+                        <!-- </label> -->
                     </div>
                     <div class="tp-caption w-light color-white text-center"
                          data-x="center"
@@ -208,24 +211,13 @@
     <div class="wrapper light-wrapper">
         <div class="row row-eq-height row-eq-height-map no-gutter">
             <div id="map-container" class="col-md-6">
-                <div class="map-full" id="shopDistances-container">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2499.4483800426133!2d3.2241689!3d51.2108153!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c350cfcf934d7d%3A0xa4d8f385ffa7d70b!2sChoco-Story!5e0!3m2!1sen!2str!4v1534408440419" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen></iframe>
-                </div>
+                <div id="map"></div>
                 <!--/.map-full -->
             </div>
             <!--/column -->
             <div class="col-lg-6 ">
                 <h2 class="section-title mb-40 text-center">Steps in Our Works</h2>
-                <div class="timeline">
-                    <div class="timeline-block">
-                        <div class="timeline-icon"> <span class="icon icon-bg icon-s mb-20"><i class="et-location-pin"></i></span> </div>
-                        <!-- timeline-icon -->
-
-                        <div class="timeline-content box box-bg bg-white box-arrow left" style="">
-                            <h5>Distanta in kilometrii de la locatia dumneavostra</h5>
-                        </div>
-                        <!-- timeline-content -->
-                    </div>
+                <div class="timeline" id="showDistances">
                     <div class="timeline-block">
                         <div class="timeline-icon"> <span class="icon icon-bg icon-s">10</div>
                         <!-- timeline-icon -->
@@ -240,89 +232,6 @@
                         </div>
                         <!-- timeline-content -->
                     </div>
-                    <!-- timeline-block -->
-
-                    <div class="timeline-block">
-                        <div class="timeline-icon"> <span class="icon icon-bg icon-s mb-20"><i class="et-bar-graph"></i></span> </div>
-                        <!-- timeline-icon -->
-
-                        <div class="timeline-content box box-bg bg-white box-arrow left">
-                            <h5>2. Data Analysis</h5>
-                            <p class="mb-20">Aenean lacinia bibendum nulla sed consectetur. Nulla vitae elit libero, a pharetra augue. Duis mollis, est non commodo luctus, nisi erat porttitor.</p>
-                            <ul class="unordered-list blue mb-0">
-                                <li>Cras justo odio, dapibus ac facilisis  eget quam.</li>
-                                <li>Donec ullamcorper nulla non metus auctor fringilla.</li>
-                            </ul>
-                        </div>
-                        <!-- timeline-content -->
-                    </div>
-                    <!-- timeline-block -->
-
-                    <div class="timeline-block">
-                        <div class="timeline-icon"> <span class="icon icon-bg icon-s mb-20"><i class="et-feather"></i></span> </div>
-                        <!-- timeline-icon -->
-
-                        <div class="timeline-content box box-bg bg-white box-arrow left">
-                            <h5>3. Magic Touch</h5>
-                            <p class="mb-20">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Lorem ipsum dolor sit amet.</p>
-                            <ul class="unordered-list blue mb-0">
-                                <li>Cras justo odio, dapibus ac facilisis  eget quam.</li>
-                                <li>Donec ullamcorper nulla non metus auctor fringilla.</li>
-                            </ul>
-                        </div>
-                        <!-- timeline-content -->
-                    </div>
-                    <!-- timeline-block -->
-
-                    <div class="timeline-block">
-                        <div class="timeline-icon"> <span class="icon icon-bg icon-s mb-20"><i class="et-box"></i></span> </div>
-                        <!-- timeline-icon -->
-
-                        <div class="timeline-content box box-bg bg-white box-arrow left">
-                            <h5>4. Finalize Product</h5>
-                            <p class="mb-20">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur.</p>
-                            <ul class="unordered-list blue mb-0">
-                                <li>Cras justo odio, dapibus ac facilisis  eget quam.</li>
-                                <li>Donec ullamcorper nulla non metus auctor fringilla.</li>
-                            </ul>
-                        </div>
-                        <!-- timeline-content -->
-                    </div>
-                    <!-- timeline-block -->
-                    <!-- timeline-block -->
-
-                    <div class="timeline-block">
-                        <div class="timeline-icon"> <span class="icon icon-bg icon-s mb-20"><i class="et-box"></i></span> </div>
-                        <!-- timeline-icon -->
-
-                        <div class="timeline-content box box-bg bg-white box-arrow left">
-                            <h5>4. Finalize Product</h5>
-                            <p class="mb-20">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur.</p>
-                            <ul class="unordered-list blue mb-0">
-                                <li>Cras justo odio, dapibus ac facilisis  eget quam.</li>
-                                <li>Donec ullamcorper nulla non metus auctor fringilla.</li>
-                            </ul>
-                        </div>
-                        <!-- timeline-content -->
-                    </div>
-                    <!-- timeline-block -->
-                    <!-- timeline-block -->
-
-                    <div class="timeline-block">
-                        <div class="timeline-icon"> <span class="icon icon-bg icon-s mb-20"><i class="et-box"></i></span> </div>
-                        <!-- timeline-icon -->
-
-                        <div class="timeline-content box box-bg bg-white box-arrow left">
-                            <h5>4. Finalize Product</h5>
-                            <p class="mb-20">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur.</p>
-                            <ul class="unordered-list blue mb-0">
-                                <li>Cras justo odio, dapibus ac facilisis  eget quam.</li>
-                                <li>Donec ullamcorper nulla non metus auctor fringilla.</li>
-                            </ul>
-                        </div>
-                        <!-- timeline-content -->
-                    </div>
-                    <!-- timeline-block -->
 
                 </div>
                 <!-- timeline -->
@@ -379,5 +288,16 @@
 
     });
 </script>
+
+
+<!-- <script src="assets/js/jquery-3.3.1.min.js"></script> -->
+<script src="assets/selectize/js/standalone/selectize.min.js"></script>
+<script src="assets/js/main.js"></script>
+
+
+<script src="js/handlerMarkers.js"></script>
+<script src="js/calculateDistance.js"></script>
+<script src="js/initMaps.js"></script>
+
 </body>
 </html>
