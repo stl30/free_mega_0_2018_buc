@@ -14,7 +14,7 @@ $(function () {
     function loadProductListCallback(data) {
         productList = data;
         data.forEach(function (element) {
-            element.imgSource = 'images/htcu11.png';
+            element.imgSource = 'assets/images/htcu11.png';
         });
         initAutocomplete();
     }
