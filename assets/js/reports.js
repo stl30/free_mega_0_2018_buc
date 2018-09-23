@@ -65,7 +65,7 @@ function historyChart(dates,views){
         data: {
             labels: dates,
             datasets: [{
-                label: '# of views per days',
+                label: '# of views / day',
                 data: views
             }]
         },
@@ -79,8 +79,7 @@ function historyChart(dates,views){
             scales: {
                 yAxes: [{
                     ticks: {
-                        beginAtZero: true,
-                        stepSize: 1
+                        beginAtZero: true
                     }
                 }],
                 xAxes: [{
@@ -128,8 +127,7 @@ function prodViewsChart(prodNames,prodViews){
     ctx.fillRect(10,10,200,100);
     
     var myChart = new Chart(ctx, {
-        type: 'horizontalBar', 
-        barThickness: 15,
+        type: 'horizontalBar',
         data: {
             labels: prodNames,
             datasets: [{
@@ -144,6 +142,11 @@ function prodViewsChart(prodNames,prodViews){
                     // This more specific font property overrides the global property
                     fontColor: 'black'
                 }
+            },
+            scales: {
+                yAxes: [{
+                   
+                }]
             }
         }
     });
