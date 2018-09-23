@@ -24,6 +24,7 @@ function initMap(coordsToDisplay, origin1) {
                 center: myCurrentLocation
             });
 
+
             directionsDisplay.setMap(map);
 
             calculateAndDisplayRoute(directionsService, directionsDisplay, origin1.lat, origin1.lng, coordsToDisplay[0][1], coordsToDisplay[0][2]);
@@ -66,8 +67,12 @@ function showSelectedMarkers() {
         marker = new google.maps.Marker({
             position: new google.maps.LatLng(locations[count][1], locations[count][2]),
             map: map,
-            title: locations[count][0]
+            title: locations[count][0],
+            animation: google.maps.Animation.DROP
         });
+
+        map.setZoom(12);
+
 
         //Attach click event to the marker.
         (function (marker) {

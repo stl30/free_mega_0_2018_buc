@@ -7207,7 +7207,7 @@ figure.overlay img {
 .timeline-icon {
     position: absolute;
     top: 0;
-    left: 10%;
+    left: 8.3%;
     margin-top: 5px;
     text-align: center;
     -webkit-transform: translateZ();
@@ -7222,13 +7222,14 @@ figure.overlay img {
     top: 40px;
     left: 13.3%;
     margin-left: -1px;
-    height: 78%;
+    height: 90%;
     width: 1px;
     background: rgba(0, 0, 0, 0.1);
 }
 .timeline-content {
     position: relative;
     width: 80%;
+    left: 5%;
 }
 
 .icon-bg {
