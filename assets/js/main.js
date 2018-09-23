@@ -60,6 +60,7 @@ $(function () {
         $('#productScreenSize').html(productVariant.screen_size);
         $('#productMemory').html(productVariant.memory);
         $('#productCamera').html(productVariant.camera);
+        $('#productManufacturer').html(productVariant.producator);
     }
 
     function loadProductDetailsCallback(data) {
@@ -73,11 +74,14 @@ $(function () {
         $('#variantList').html('');
 
         for (var i = 0; i < data.length; i++) {
-            $('#variantList').append('<li data-index="' + i + '">' + data[i].name + '</li>');
+            // $('#variantList').append('<li data-index="' + i + '">' + data[i].name + '</li>');
+            $('#variantList').append('<option value="' + i + '">' + data[i].name + '</option>');
         }
 
-        $("#variantList li").click(function () {
-            var selectedIndex = $(this).data('index');
+        $("#variantList").on('change',function () {
+            // console.log($(this).val())
+            var selectedIndex = $(this).val();
+            // console.log(selectedIndex)
             displayDetails(data[selectedIndex]);
         });
 
